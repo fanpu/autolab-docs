@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome to the Autolab Docs
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
 ## Commands
 

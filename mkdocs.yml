@@ -1,2 +1,19 @@
 site_name: Autolab Docs
-theme: readthedocs
+pages:
+    - Home: index.md
+    - Guide for Instructors: instructors.md 
+theme: null
+theme_dir: 'mkdocs-material/material'
+repo_name: 'Autolab'
+repo_url: 'https://github.com/Autolab/autolab'
+extra:
+  palette:
+    primary: 'red'
+    accent: 'red'
+  social:
+    - type: 'github'
+      link: 'https://github.com/Autolab'
+markdown_extensions:
+  - admonition
+  - codehilite(linenums=true)
+strict: true

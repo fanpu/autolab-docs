@@ -44,7 +44,7 @@
   
   
   
-    <body data-md-color-primary="red" data-md-color-accent="red">
+    <body data-md-color-primary="red" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -62,7 +62,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="Autolab Docs" class=" md-icon md-icon--home  md-header-nav__button">
+        <a href="." title="Autolab Docs" class=" md-logo  md-header-nav__button">
+          
+            <img src="./images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -138,7 +140,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="./images/logo.svg">
       
     </i>
     Autolab Docs
@@ -196,16 +200,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1404" title="Ubuntu 14.04+" class="md-nav__link">
+    Ubuntu 14.04+
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+        
+          <li class="md-nav__item">
+  <a href="#mac-osx" title="Mac OSX" class="md-nav__link">
+    Mac OSX
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -222,6 +239,17 @@
     
       <a href="instructors/" title="Guide for Instructors" class="md-nav__link">
         Guide for Instructors
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="lab/" title="Guide for Lab Authors" class="md-nav__link">
+        Guide for Lab Authors
       </a>
     
   </li>
@@ -248,16 +276,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1404" title="Ubuntu 14.04+" class="md-nav__link">
+    Ubuntu 14.04+
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+        
+          <li class="md-nav__item">
+  <a href="#mac-osx" title="Mac OSX" class="md-nav__link">
+    Mac OSX
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -276,23 +317,15 @@
                 
                 <h1 id="welcome-to-the-autolab-docs">Welcome to the Autolab Docs</h1>
 <p>Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</pre></div>
-</td></tr></table>
+<h2 id="getting-started">Getting Started</h2>
+<p>For information on how to use Autolab go to the <a href="./instructors">instructors page</a>. To learn how to write an autograded lab go to the <a href="./lab">lab authors page</a></p>
+<p>Autolab consists of two services, the Ruby on Rails frontend and Tango, the Python grading server. In order, to use all features
+of Autolab, we highly recommend installing both services.</p>
+<p>Currently, we have support for installation on <a href="#ubuntu-14.04+">Ubuntu 14.04+</a> and <a href="#Mac-OSX">Mac OSX</a></p>
+<h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
+<p>TODO</p>
+<h3 id="mac-osx">Mac OSX</h3>
+<p>TODO</p>
               
             </article>
           </div>
@@ -340,6 +373,8 @@ docs/
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="https://github.com/Autolab" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://facebook.com/autolabproject" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 

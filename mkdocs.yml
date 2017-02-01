@@ -1,18 +1,21 @@
 site_name: Autolab Docs
 pages:
     - Home: index.md
-    - Guide for Instructors: instructors.md 
+    - Guide for Instructors: instructors.md
+    - Guide for Lab Authors: lab.md
 theme: null
 theme_dir: 'mkdocs-material/material'
 repo_name: 'Autolab'
 repo_url: 'https://github.com/Autolab/autolab'
 extra:
+  logo: 'images/logo.svg'
   palette:
-    primary: 'red'
-    accent: 'red'
+     primary: 'red'
   social:
     - type: 'github'
       link: 'https://github.com/Autolab'
+    - type: 'facebook'
+      link: 'https://facebook.com/autolabproject'
 markdown_extensions:
   - admonition
   - codehilite(linenums=true)

@@ -180,16 +180,16 @@ The [hello/hello-handout/](https://github.com/autolab/Autolab/tree/master/exampl
 contains the files that the students will use to work on the lab. It contains no hard state, and is populated entirely with files from `hello/src`:
 
 [hello/hello-handout/README](https://github.com/autolab/Autolab/tree/master/examples/hello/hello-handout/README):
-```
+```python
 For this lab, you should write a tiny C program, called "hello.c",
 that prints "hello, world" to stdout and then indicates success by
 exiting with a status of zero.
 
 To test your work: 
-linux> make clean; make; ./hello
+$ make clean; make; ./hello
 
 To run the same autograder that Autolab will use when you submit:
-linux> ./driver.sh
+$ ./driver.sh
 
 Files:
 README          This file
@@ -207,9 +207,9 @@ clean:
 	rm -rf *~ hello
 ```
 To compile and run their code, students type:
-```
-linux> make clean; make
-linux> ./hello
+```python
+$ make clean; make
+$ ./hello
 ```
 
 ### Autograder
@@ -252,15 +252,15 @@ exit
 
 For example:
 
-```
-linux> ./driver.sh
-Compiling hello.c
-rm -rf *~ hello
-gcc hello.c -o hello
-Running ./hello
-Hello, world
-Success: ./hello runs with an exit status of 0
-{"scores": {"Correctness": 100}}
+```python
+$ ./driver.sh
+# Compiling hello.c
+# rm -rf *~ hello
+# gcc hello.c -o hello
+# Running ./hello
+# Hello, world
+# Success: ./hello runs with an exit status of 0
+# {"scores": {"Correctness": 100}}
 ```
 
 Notice that the autograder expects the `hello` lab on the Autolab front-end to have been defined with a problem called "Correctness", with a maximum value of 100 points. If you forget to define the problems listed in the JSON autoresult, scores will still be logged, but they won't be posted to the database. 

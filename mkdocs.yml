@@ -1,6 +1,7 @@
 site_name: Autolab Docs
 pages:
-    - Home: index.md
+    - Autolab: index.md
+    - Tango: tango.md
     - Guide for Instructors: instructors.md
     - Guide for Lab Authors: lab.md
 theme: null

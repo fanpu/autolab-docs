@@ -6,16 +6,141 @@ Autolab is a course management and homework autograding platform that enables in
 
 For information on how to use Autolab go to the [instructors page](/instructors). To learn how to write an autograded lab go to the [lab authors page](/lab)
 
-Autolab consists of two services, the Ruby on Rails frontend and Tango, the Python grading server. In order, to use all features
+Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order, to use all features
 of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-14.04+) and [Mac OSX](#Mac-OSX)
+Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx)
 
 ### Ubuntu 14.04+
 
-TODO
+The following command runs a script that installs Autolab and all it's dependancies. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh)
+
+```bash
+AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
+```
+
 
 
 ### Mac OSX
 
-TODO
+Follow the step-by-step instructions below:
+
+1. Install [rbenv](https://github.com/sstephenson/rbenv) (use the Basic GitHub Checkout method)
+
+2. Install [ruby-build](https://github.com/sstephenson/ruby-build) as an rbenv plugin:
+
+        git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+   Restart your shell at this point in order to start using your newly installed rbenv
+        
+
+3. Install the correct version of ruby:
+        
+        rbenv install $(cat .ruby-version)
+   At this point, confirm that `rbenv` is working (you might need to restart your shell):
+
+        $ which ruby
+        ~/.rbenv/shims/ruby
+
+        $ which rake
+        ~/.rbenv/shims/rake
+
+4. Install `bundler`:
+        
+        gem install bundler
+        rbenv rehash
+
+5. Clone the Autolab repo into any desired directory:
+
+        git clone https://github.com/autolab/Autolab.git
+
+6. Install the required gems (run the following commands in the cloned Autolab repo):
+
+        cd bin
+        bundle install
+   Refer to the [FAQ](#faq) for issues installing gems
+
+7. Install one of two database options
+
+    * [SQLite](https://www.tutorialspoint.com/sqlite/sqlite_installation.htm) should **only** be used in development
+    * [MySQL](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) can be used in development or production
+
+8. Configure your database:
+      
+        cp config/database.yml.template config/database.yml
+   Edit `database.yml` with the correct credentials for your chosen database. Refer to the [FAQ](#faq) for any issues.
+
+9. Configure the Devise Auth System with a unique key (run these commands exactly):
+
+        cp config/nitializers/devise.rb.template config/initializers/devise.rb
+        sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" initializers/devise.rb
+   Fill in `<YOUR_WEBSITE>` in `config/initializers/devise.rb` file. To skip this step for now, fill with `foo.bar`.
+
+10. Create and initialize the database tables:
+
+        bundle exec rake db:create
+    Do not forget to use bundle exec in front of every rake/rails command.
+
+11. Populate dummy data (development only):
+        
+        bundle exec rake autolab:populate
+
+12. Start the rails server:
+
+        bundle exec rails s -p 3000
+
+14. Go to localhost:3000 and login with `Developer Login`:
+      
+        Email: "admin@foo.bar".
+
+13. Install [Tango](/tango), the backend autograding service.
+
+### FAQ
+
+This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,
+please contact us at <autolab-dev@andrew.cmu.edu>
+
+####Ubuntu Script Bugs
+If you get the following error
+```bash
+Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release  
+Unable to find expected entry 'main/binary-i386/Packages' in Release file (Wrong sources.list entry or malformed file)
+``` 
+then follow the solution in [this post](http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome). 
+
+####Where do I find the MySQL username and password?
+If this is your first time logging into MySQL, your username is 'root'. You may also need to set the root password:
+
+Start the server:
+```bash
+sudo /usr/local/mysql/support-files/mysql.server start
+```
+
+Set the password:
+```bash
+mysqladmin -u root password "[New_Password]"
+```
+
+If you lost your root password, refer to the [MySQL wiki](http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html)
+
+####Bundle Install Errors
+This happens as gems get updated. These fixes are gem-specific, but two common ones are
+
+`eventmachine`
+```bash
+bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include
+```
+
+`libv8`
+```bash
+bundle config build.libv8 --with-system-v8
+```
+
+Run `bundle install` again
+
+If this still does not work, try exploring [this StackOverflow link](http://stackoverflow.com/questions/23536893/therubyracer-gemextbuilderror-error-failed-to-build-gem-native-extension)
+
+####Can't connect to local MySQL server through socket
+Make sure you've started the MySQL server and double-check the socket in `config/database.yml`
+
+The default socket location is `/tmp/mysql.sock`.   
+

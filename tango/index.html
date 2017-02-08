@@ -9,17 +9,17 @@
       
       
       
-        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
       
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
     
     
       
-        <title>Autolab Docs</title>
+        <title>Tango - Autolab Docs</title>
       
     
     
-      <script src="/assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../assets/javascripts/modernizr-facb31f4a3.js"></script>
     
     
       
@@ -32,9 +32,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application-bc099a55ca.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-bc099a55ca.css">
       
-        <link rel="stylesheet" href="/assets/stylesheets/application-02ce7adcc2.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
       
       
     
@@ -62,9 +62,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="" title="Autolab Docs" class=" md-logo  md-header-nav__button">
+        <a href=".." title="Autolab Docs" class=" md-logo  md-header-nav__button">
           
-            <img src="/images/logo.svg" width="24" height="24">
+            <img src="../images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -75,7 +75,9 @@
         <span class="md-flex__ellipsis md-header-nav__title">
           
             
-            Autolab Docs
+              
+            
+            Tango
           
         </span>
       </div>
@@ -140,7 +142,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <i class=" md-logo  md-nav__button">
       
-        <img src="/images/logo.svg">
+        <img src="../images/logo.svg">
       
     </i>
     Autolab Docs
@@ -174,7 +176,7 @@
       
   <li class="md-nav__item">
     
-      <a href="" title="Autolab" class="md-nav__link">
+      <a href=".." title="Autolab" class="md-nav__link">
         Autolab
       </a>
     
@@ -185,9 +187,39 @@
       
   <li class="md-nav__item">
     
-      <a href="/tango" title="Tango" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Tango
-      </a>
+      </label>
+    
+    <a href="./" title="Tango" class="md-nav__link md-nav__link--active">
+      Tango
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -196,7 +228,7 @@
       
   <li class="md-nav__item">
     
-      <a href="/instructors" title="Guide for Instructors" class="md-nav__link">
+      <a href="../instructors/" title="Guide for Instructors" class="md-nav__link">
         Guide for Instructors
       </a>
     
@@ -207,7 +239,7 @@
       
   <li class="md-nav__item">
     
-      <a href="/lab" title="Guide for Lab Authors" class="md-nav__link">
+      <a href="../lab/" title="Guide for Lab Authors" class="md-nav__link">
         Guide for Lab Authors
       </a>
     
@@ -221,13 +253,55 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
               
-  <h1>404 - Not found</h1>
-
+                
+                <h1 id="tango">Tango</h1>
+<p>Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for <a href="../">Autolab</a> and has been extensively used for autograding programming assignments.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>A brief overview of the Tango respository:</p>
+<ul>
+<li><code>tango.py</code> - Main tango server</li>
+<li><code>jobQueue.py</code> - Manages the job queue</li>
+<li><code>jobManager.py</code> - Assigns jobs to free VMs</li>
+<li><code>worker.py</code> - Shepherds a job through its execution</li>
+<li><code>preallocator.py</code> - Manages pools of VMs</li>
+<li><code>vmms/</code> - VMMS library implementations</li>
+<li><code>restful-tango/</code> - HTTP server layer on the main Tango</li>
+</ul>
+<p>Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in Docker containers (<strong>recommended</strong>), <a href="http://opencirrus.intel-research.net/tashi/">Tashi VMs</a>, or Amazon EC2.</p>
+<p>For more information about the different Tango components, go to the following pages:</p>
+              
             </article>
           </div>
         </div>
@@ -235,6 +309,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Autolab" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Autolab
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../instructors/" title="Guide for Instructors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Guide for Instructors
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -265,8 +374,8 @@
       
     </div>
     
-      <script src="/assets/javascripts/application-7f35cda7dd.js"></script>
-      <script>var config={url:{base:""}},app=new Application(config);app.initialize()</script>
+      <script src="../assets/javascripts/application-7f35cda7dd.js"></script>
+      <script>var config={url:{base:".."}},app=new Application(config);app.initialize()</script>
       
     
     

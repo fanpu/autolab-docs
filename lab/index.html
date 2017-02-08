@@ -176,8 +176,19 @@
       
   <li class="md-nav__item">
     
-      <a href=".." title="Home" class="md-nav__link">
-        Home
+      <a href=".." title="Autolab" class="md-nav__link">
+        Autolab
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../tango/" title="Tango" class="md-nav__link">
+        Tango
       </a>
     
   </li>
@@ -747,21 +758,21 @@ contains the files that the students will use to work on the lab. It contains no
 12
 13
 14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>For this lab, you should write a tiny C program, called &quot;hello.c&quot;,
-that prints &quot;hello, world&quot; to stdout and then indicates success by
-exiting with a status of zero.
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">For</span> <span class="n">this</span> <span class="n">lab</span><span class="p">,</span> <span class="n">you</span> <span class="n">should</span> <span class="n">write</span> <span class="n">a</span> <span class="n">tiny</span> <span class="n">C</span> <span class="n">program</span><span class="p">,</span> <span class="n">called</span> <span class="s2">&quot;hello.c&quot;</span><span class="p">,</span>
+<span class="n">that</span> <span class="n">prints</span> <span class="s2">&quot;hello, world&quot;</span> <span class="n">to</span> <span class="n">stdout</span> <span class="ow">and</span> <span class="n">then</span> <span class="n">indicates</span> <span class="n">success</span> <span class="n">by</span>
+<span class="n">exiting</span> <span class="k">with</span> <span class="n">a</span> <span class="n">status</span> <span class="n">of</span> <span class="n">zero</span><span class="o">.</span>
 
-To test your work: 
-linux&gt; make clean; make; ./hello
+<span class="n">To</span> <span class="n">test</span> <span class="n">your</span> <span class="n">work</span><span class="p">:</span> 
+<span class="err">$</span> <span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">make</span><span class="p">;</span> <span class="o">./</span><span class="n">hello</span>
 
-To run the same autograder that Autolab will use when you submit:
-linux&gt; ./driver.sh
+<span class="n">To</span> <span class="n">run</span> <span class="n">the</span> <span class="n">same</span> <span class="n">autograder</span> <span class="n">that</span> <span class="n">Autolab</span> <span class="n">will</span> <span class="n">use</span> <span class="n">when</span> <span class="n">you</span> <span class="n">submit</span><span class="p">:</span>
+<span class="err">$</span> <span class="o">./</span><span class="n">driver</span><span class="o">.</span><span class="n">sh</span>
 
-Files:
-README          This file
-Makefile        Compiles hello.c
-driver.sh       Autolab autograder
-hello.c         Empty C file that you will edit
+<span class="n">Files</span><span class="p">:</span>
+<span class="n">README</span>          <span class="n">This</span> <span class="nb">file</span>
+<span class="n">Makefile</span>        <span class="n">Compiles</span> <span class="n">hello</span><span class="o">.</span><span class="n">c</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">sh</span>       <span class="n">Autolab</span> <span class="n">autograder</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">c</span>         <span class="n">Empty</span> <span class="n">C</span> <span class="nb">file</span> <span class="n">that</span> <span class="n">you</span> <span class="n">will</span> <span class="n">edit</span>
 </pre></div>
 </td></tr></table>
 
@@ -782,8 +793,8 @@ clean:
 
 <p>To compile and run their code, students type:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>linux&gt; make clean; make
-linux&gt; ./hello
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">make</span>
+<span class="err">$</span> <span class="o">./</span><span class="n">hello</span>
 </pre></div>
 </td></tr></table>
 
@@ -860,14 +871,14 @@ linux&gt; ./hello
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>linux&gt; ./driver.sh
-Compiling hello.c
-rm -rf *~ hello
-gcc hello.c -o hello
-Running ./hello
-Hello, world
-Success: ./hello runs with an exit status of 0
-{&quot;scores&quot;: {&quot;Correctness&quot;: 100}}
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="o">./</span><span class="n">driver</span><span class="o">.</span><span class="n">sh</span>
+<span class="c1"># Compiling hello.c</span>
+<span class="c1"># rm -rf *~ hello</span>
+<span class="c1"># gcc hello.c -o hello</span>
+<span class="c1"># Running ./hello</span>
+<span class="c1"># Hello, world</span>
+<span class="c1"># Success: ./hello runs with an exit status of 0</span>
+<span class="c1"># {&quot;scores&quot;: {&quot;Correctness&quot;: 100}}</span>
 </pre></div>
 </td></tr></table>
 

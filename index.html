@@ -15,7 +15,7 @@
     
     
       
-        <title>Home - Autolab Docs</title>
+        <title>Autolab - Autolab Docs</title>
       
     
     
@@ -77,7 +77,7 @@
             
               
             
-            Home
+            Autolab
           
         </span>
       </div>
@@ -182,11 +182,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Home
+        Autolab
       </label>
     
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
-      Home
+    <a href="." title="Autolab" class="md-nav__link md-nav__link--active">
+      Autolab
     </a>
     
       
@@ -221,6 +221,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-script-bugs" title="Ubuntu Script Bugs" class="md-nav__link">
+    Ubuntu Script Bugs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-do-i-find-the-mysql-username-and-password" title="Where do I find the MySQL username and password?" class="md-nav__link">
+    Where do I find the MySQL username and password?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-install-errors" title="Bundle Install Errors" class="md-nav__link">
+    Bundle Install Errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-connect-to-local-mysql-server-through-socket" title="Can't connect to local MySQL server through socket" class="md-nav__link">
+    Can't connect to local MySQL server through socket
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -229,6 +270,17 @@
     </ul>
   
 </nav>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="tango/" title="Tango" class="md-nav__link">
+        Tango
+      </a>
     
   </li>
 
@@ -297,6 +349,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-script-bugs" title="Ubuntu Script Bugs" class="md-nav__link">
+    Ubuntu Script Bugs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-do-i-find-the-mysql-username-and-password" title="Where do I find the MySQL username and password?" class="md-nav__link">
+    Where do I find the MySQL username and password?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundle-install-errors" title="Bundle Install Errors" class="md-nav__link">
+    Bundle Install Errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-connect-to-local-mysql-server-through-socket" title="Can't connect to local MySQL server through socket" class="md-nav__link">
+    Can't connect to local MySQL server through socket
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -319,13 +412,175 @@
 <p>Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>For information on how to use Autolab go to the <a href="./instructors">instructors page</a>. To learn how to write an autograded lab go to the <a href="./lab">lab authors page</a></p>
-<p>Autolab consists of two services, the Ruby on Rails frontend and Tango, the Python grading server. In order, to use all features
+<p>Autolab consists of two services, the Ruby on Rails frontend and <a href="./tango">Tango</a>, the Python grading server. In order, to use all features
 of Autolab, we highly recommend installing both services.</p>
-<p>Currently, we have support for installation on <a href="#ubuntu-14.04+">Ubuntu 14.04+</a> and <a href="#Mac-OSX">Mac OSX</a></p>
+<p>Currently, we have support for installation on <a href="#ubuntu-1404">Ubuntu 14.04+</a> and <a href="#mac-osx">Mac OSX</a></p>
 <h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
-<p>TODO</p>
+<p>The following command runs a script that installs Autolab and all it's dependancies. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="mac-osx">Mac OSX</h3>
-<p>TODO</p>
+<p>Follow the step-by-step instructions below:</p>
+<ol>
+<li>
+<p>Install <a href="https://github.com/sstephenson/rbenv">rbenv</a> (use the Basic GitHub Checkout method)</p>
+</li>
+<li>
+<p>Install <a href="https://github.com/sstephenson/ruby-build">ruby-build</a> as an rbenv plugin:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</pre></div>
+</td></tr></table>
+
+<p>Restart your shell at this point in order to start using your newly installed rbenv</p>
+</li>
+<li>
+<p>Install the correct version of ruby:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rbenv install $(cat .ruby-version)
+</pre></div>
+</td></tr></table>
+
+<p>At this point, confirm that <code>rbenv</code> is working (you might need to restart your shell):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ which ruby
+~/.rbenv/shims/ruby
+
+$ which rake
+~/.rbenv/shims/rake
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Install <code>bundler</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gem install bundler
+rbenv rehash
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Clone the Autolab repo into any desired directory:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/autolab/Autolab.git
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Install the required gems (run the following commands in the cloned Autolab repo):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd bin
+bundle install
+</pre></div>
+</td></tr></table>
+
+<p>Refer to the <a href="#faq">FAQ</a> for issues installing gems</p>
+</li>
+<li>
+<p>Install one of two database options</p>
+<ul>
+<li><a href="https://www.tutorialspoint.com/sqlite/sqlite_installation.htm">SQLite</a> should <strong>only</strong> be used in development</li>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html">MySQL</a> can be used in development or production</li>
+</ul>
+</li>
+<li>
+<p>Configure your database:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp config/database.yml.template config/database.yml
+</pre></div>
+</td></tr></table>
+
+<p>Edit <code>database.yml</code> with the correct credentials for your chosen database. Refer to the <a href="#faq">FAQ</a> for any issues.</p>
+</li>
+<li>
+<p>Configure the Devise Auth System with a unique key (run these commands exactly):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp config/nitializers/devise.rb.template config/initializers/devise.rb
+sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initializers/devise.rb
+</pre></div>
+</td></tr></table>
+
+<p>Fill in <code>&lt;YOUR_WEBSITE&gt;</code> in <code>config/initializers/devise.rb</code> file. To skip this step for now, fill with <code>foo.bar</code>.</p>
+</li>
+<li>
+<p>Create and initialize the database tables:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rake db:create
+</pre></div>
+</td></tr></table>
+
+<p>Do not forget to use bundle exec in front of every rake/rails command.</p>
+</li>
+<li>
+<p>Populate dummy data (development only):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rake autolab:populate
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Start the rails server:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rails s -p 3000
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Go to localhost:3000 and login with <code>Developer Login</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Email: &quot;admin@foo.bar&quot;.
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Install <a href="./tango">Tango</a>, the backend autograding service.</p>
+</li>
+</ol>
+<h3 id="faq">FAQ</h3>
+<p>This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,
+please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;">&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;</a></p>
+<h4 id="ubuntu-script-bugs">Ubuntu Script Bugs</h4>
+<p>If you get the following error</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release  
+Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#39;</span> in Release file <span class="o">(</span>Wrong sources.list entry or malformed file<span class="o">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>then follow the solution in <a href="http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome">this post</a>. </p>
+<h4 id="where-do-i-find-the-mysql-username-and-password">Where do I find the MySQL username and password?</h4>
+<p>If this is your first time logging into MySQL, your username is 'root'. You may also need to set the root password:</p>
+<p>Start the server:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo /usr/local/mysql/support-files/mysql.server start
+</pre></div>
+</td></tr></table>
+
+<p>Set the password:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mysqladmin -u root password <span class="s2">&quot;[New_Password]&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>If you lost your root password, refer to the <a href="http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html">MySQL wiki</a></p>
+<h4 id="bundle-install-errors">Bundle Install Errors</h4>
+<p>This happens as gems get updated. These fixes are gem-specific, but two common ones are</p>
+<p><code>eventmachine</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle config build.eventmachine --with-cppflags<span class="o">=</span>-I/usr/local/opt/openssl/include
+</pre></div>
+</td></tr></table>
+
+<p><code>libv8</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle config build.libv8 --with-system-v8
+</pre></div>
+</td></tr></table>
+
+<p>Run <code>bundle install</code> again</p>
+<p>If this still does not work, try exploring <a href="http://stackoverflow.com/questions/23536893/therubyracer-gemextbuilderror-error-failed-to-build-gem-native-extension">this StackOverflow link</a></p>
+<h4 id="cant-connect-to-local-mysql-server-through-socket">Can't connect to local MySQL server through socket</h4>
+<p>Make sure you've started the MySQL server and double-check the socket in <code>config/database.yml</code></p>
+<p>The default socket location is <code>/tmp/mysql.sock</code>.   </p>
               
             </article>
           </div>
@@ -339,13 +594,13 @@ of Autolab, we highly recommend installing both services.</p>
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="instructors/" title="Guide for Instructors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="tango/" title="Tango" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Guide for Instructors
+                Tango
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

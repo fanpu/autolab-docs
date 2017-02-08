@@ -15,7 +15,7 @@
     
     
       
-        <title>Getting Started - Autolab Docs</title>
+        <title>VMMS API - Autolab Docs</title>
       
     
     
@@ -81,7 +81,7 @@
                 </span>
               
             
-            Getting Started
+            VMMS API
           
         </span>
       </div>
@@ -250,52 +250,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../tango/" title="Getting Started" class="md-nav__link">
         Getting Started
-      </label>
-    
-    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
-      Getting Started
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" title="Getting Started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -315,9 +272,104 @@
           
   <li class="md-nav__item">
     
-      <a href="../tango-vmms/" title="VMMS API" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         VMMS API
-      </a>
+      </label>
+    
+    <a href="./" title="VMMS API" class="md-nav__link md-nav__link--active">
+      VMMS API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api" title="API" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initializevm" title="initializeVM" class="md-nav__link">
+    initializeVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waitvm" title="waitVM" class="md-nav__link">
+    waitVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyin" title="copyIn" class="md-nav__link">
+    copyIn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runjob" title="runJob" class="md-nav__link">
+    runJob
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyout" title="copyOut" class="md-nav__link">
+    copyOut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
+    destroyVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
+    safeDestroyVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvms" title="getVMs" class="md-nav__link">
+    getVMs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-setup" title="Docker Setup" class="md-nav__link">
+    Docker Setup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -341,29 +393,83 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" title="Getting Started" class="md-nav__link">
-    Getting Started
+  <a href="#api" title="API" class="md-nav__link">
+    API
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
+  <a href="#initializevm" title="initializeVM" class="md-nav__link">
+    initializeVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waitvm" title="waitVM" class="md-nav__link">
+    waitVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyin" title="copyIn" class="md-nav__link">
+    copyIn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runjob" title="runJob" class="md-nav__link">
+    runJob
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyout" title="copyOut" class="md-nav__link">
+    copyOut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
+    destroyVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
+    safeDestroyVM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvms" title="getVMs" class="md-nav__link">
+    getVMs
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-setup" title="Docker Setup" class="md-nav__link">
+    Docker Setup
+  </a>
   
 </li>
       
@@ -380,59 +486,87 @@
                
               
                 
-                <h1 id="tango">Tango</h1>
-<p>Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for <a href="../">Autolab</a> and has been extensively used for autograding programming assignments.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>A brief overview of the Tango respository:</p>
-<ul>
-<li><code>tango.py</code> - Main tango server</li>
-<li><code>jobQueue.py</code> - Manages the job queue</li>
-<li><code>jobManager.py</code> - Assigns jobs to free VMs</li>
-<li><code>worker.py</code> - Shepherds a job through its execution</li>
-<li><code>preallocator.py</code> - Manages pools of VMs</li>
-<li><code>vmms/</code> - VMMS library implementations</li>
-<li><code>restful-tango/</code> - HTTP server layer on the main Tango</li>
-</ul>
-<p>Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in Docker containers (<strong>recommended</strong>), <a href="http://opencirrus.intel-research.net/tashi/">Tashi VMs</a>, or Amazon EC2.</p>
-<p>For more information about the different Tango components, go to the following pages:</p>
-<ul>
-<li><a href="../tango-rest">REST API docs</a></li>
-<li><a href="../tango-vmms">VMMS API docs</a></li>
-<li><a href="http://autolab.github.io/2015/04/making-backend-scalable/">Tango Architecture Overview</a></li>
-</ul>
-<h3 id="installation">Installation</h3>
+                  <h1>VMMS API</h1>
+                
+                <p>This page documents the interface for Tango's Virtual Machine Management Systems' (VMMSs) API. See <a href="https://github.com/autolab/Tango/tree/master/vmms">the vmms directory</a> in Tango for example implementations. </p>
+<h3 id="api">API</h3>
+<p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run. </p>
+<h4 id="initializevm">initializeVM</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">initializeVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Creates a new VM instance for the VMMS based on the fields of <code>vm</code>, which is a <code>TangoMachine</code> object defined in <code>tangoObjects.py</code>.</p>
+<h4 id="waitvm">waitVM</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">waitVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">max_secs</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Waits at most <code>max_secs</code> for a VM to be ready to run jobs. Returns an error if the VM is not ready after <code>max_secs</code>.</p>
+<h4 id="copyin">copyIn</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">copyIn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">inputFiles</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM. </p>
+<h4 id="runjob">runJob</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">runJob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">runTimeout</span><span class="p">,</span> <span class="n">maxOutputFileSize</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API. </p>
+<h4 id="copyout">copyOut</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">copyOut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">,</span> <span class="n">destFile</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine. </p>
+<h4 id="destroyvm">destroyVM</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">destroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Removes a VM from the Tango system. </p>
+<h4 id="safedestroyvm">safeDestroyVM</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">safeDestroyVM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vm</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Removes a VM from the Tango system and makes sure that it has been removed. </p>
+<h4 id="getvms">getVMs</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">getVMs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Returns a complete list of VMs associated with this Tango system. </p>
+<h3 id="docker-setup">Docker Setup</h3>
 <ol>
 <li>
-<p>Obtain the source code.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/autolab/Tango.git<span class="p">;</span> <span class="nb">cd</span> Tango
+<p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Install Redis following <a href="http://redis.io/topics/quickstart">this guide</a>. By default, Tango uses Redis as a stateless job queue. Learn more <a href="http://autolab.github.io/2015/04/making-backend-scalable/">here</a>.</p>
-</li>
-<li>
-<p>Create a <code>config.py</code> file from the given template. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp config.template.py config.py
+<p>Build base Docker image from root Tango directory.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> path/to/Tango
+docker build -t autograding_image vmms/
+docker images autograding_image    <span class="c1"># Check if image built</span>
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Create the course labs directory where job's output files will go, organized by key and lab name.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir courselabs
+<p>Update <code>VMMS_NAME</code> in <code>config.py</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># in config.py</span>
+<span class="n">VMMS_NAME</span> <span class="o">=</span> <span class="s2">&quot;localDocker&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p>By default the <code>COURSELABS</code> option in <code>config.py</code> points to the <code>courselabs</code> directory in the Tango directory.
-   Change this to specify another path if you wish.</p>
-</li>
-<li>
-<p>Set up a VMMS for Tango to use. The easiest and recommended is Docker.</p>
-</li>
-<li>
-<p><a href="../tango-vmms/#docker-setup">Docker</a></p>
 </li>
 </ol>
               
@@ -447,7 +581,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lab/" title="Guide for Lab Authors" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tango-rest/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -456,25 +590,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Guide for Lab Authors
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../tango-rest/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 REST API
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>

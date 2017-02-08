@@ -15,7 +15,7 @@
     
     
       
-        <title>Autolab - Autolab Docs</title>
+        <title>Getting Started - Autolab Docs</title>
       
     
     
@@ -76,8 +76,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Autolab
+                </span>
+              
             
-            Autolab
+            Getting Started
           
         </span>
       </div>
@@ -174,6 +178,22 @@
     
       
       
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Autolab
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-1">
+        Autolab
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
   <li class="md-nav__item">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
@@ -182,11 +202,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Autolab
+        Getting Started
       </label>
     
-    <a href="." title="Autolab" class="md-nav__link md-nav__link--active">
-      Autolab
+    <a href="." title="Getting Started" class="md-nav__link md-nav__link--active">
+      Getting Started
     </a>
     
       
@@ -273,20 +293,9 @@
     
   </li>
 
-    
-      
-      
-  <li class="md-nav__item">
-    
-      <a href="tango/" title="Tango" class="md-nav__link">
-        Tango
-      </a>
-    
-  </li>
-
-    
-      
-      
+        
+          
+          
   <li class="md-nav__item">
     
       <a href="instructors/" title="Guide for Instructors" class="md-nav__link">
@@ -295,15 +304,74 @@
     
   </li>
 
-    
-      
-      
+        
+          
+          
   <li class="md-nav__item">
     
       <a href="lab/" title="Guide for Lab Authors" class="md-nav__link">
         Guide for Lab Authors
       </a>
     
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Tango
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Tango
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="tango/" title="Getting Started" class="md-nav__link">
+        Getting Started
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="tango-rest/" title="REST API" class="md-nav__link">
+        REST API
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="tango-vmms/" title="VMMS API" class="md-nav__link">
+        VMMS API
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -437,7 +505,7 @@ of Autolab, we highly recommend installing both services.</p>
 </li>
 <li>
 <p>Install the correct version of ruby:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rbenv install $(cat .ruby-version)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rbenv install <span class="k">$(</span>cat .ruby-version<span class="k">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -474,7 +542,7 @@ rbenv rehash
 <li>
 <p>Install the required gems (run the following commands in the cloned Autolab repo):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd bin
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> bin
 bundle install
 </pre></div>
 </td></tr></table>
@@ -500,7 +568,7 @@ bundle install
 <p>Configure the Devise Auth System with a unique key (run these commands exactly):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp config/nitializers/devise.rb.template config/initializers/devise.rb
-sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initializers/devise.rb
+sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot;</span> initializers/devise.rb
 </pre></div>
 </td></tr></table>
 
@@ -508,7 +576,7 @@ sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initial
 </li>
 <li>
 <p>Create and initialize the database tables:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rake db:create
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rake db:create
 </pre></div>
 </td></tr></table>
 
@@ -516,21 +584,21 @@ sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initial
 </li>
 <li>
 <p>Populate dummy data (development only):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rake autolab:populate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rake autolab:populate
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
 <p>Start the rails server:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle exec rails s -p 3000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rails s -p 3000
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
 <p>Go to localhost:3000 and login with <code>Developer Login</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Email: &quot;admin@foo.bar&quot;.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Email: <span class="s2">&quot;admin@foo.bar&quot;</span>.
 </pre></div>
 </td></tr></table>
 
@@ -594,13 +662,13 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="tango/" title="Tango" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="instructors/" title="Guide for Instructors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tango
+                Guide for Instructors
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

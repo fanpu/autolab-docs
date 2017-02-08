@@ -18,3 +18,46 @@ Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS
 
 For more information about the different Tango components, go to the following pages:
 
+* [REST API docs](/tango-rest)
+* [VMMS API docs](/tango-vmms)
+* [Tango Architecture Overview](http://autolab.github.io/2015/04/making-backend-scalable/)
+
+### Installation
+
+1. Obtain the source code.
+    
+        :::bash
+        git clone https://github.com/autolab/Tango.git; cd Tango
+    
+2. Install Redis following [this guide](http://redis.io/topics/quickstart). By default, Tango uses Redis as a stateless job queue. Learn more [here](http://autolab.github.io/2015/04/making-backend-scalable/).
+
+3. Create a `config.py` file from the given template. 
+        
+        :::bash
+        cp config.template.py config.py
+
+4. Create the course labs directory where job's output files will go, organized by key and lab name.
+
+        :::bash
+        mkdir courselabs
+   By default the `COURSELABS` option in `config.py` points to the `courselabs` directory in the Tango directory.
+   Change this to specify another path if you wish.
+
+5. Set up a VMMS for Tango to use. The easiest and recommended is Docker.
+
+   * [Docker](/tango-vmms/#docker-setup)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

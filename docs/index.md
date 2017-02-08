@@ -28,16 +28,19 @@ Follow the step-by-step instructions below:
 1. Install [rbenv](https://github.com/sstephenson/rbenv) (use the Basic GitHub Checkout method)
 
 2. Install [ruby-build](https://github.com/sstephenson/ruby-build) as an rbenv plugin:
-
+		
+		:::bash
         git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
    Restart your shell at this point in order to start using your newly installed rbenv
         
 
 3. Install the correct version of ruby:
         
+        :::bash
         rbenv install $(cat .ruby-version)
    At this point, confirm that `rbenv` is working (you might need to restart your shell):
-
+        
+        :::bash
         $ which ruby
         ~/.rbenv/shims/ruby
 
@@ -46,15 +49,18 @@ Follow the step-by-step instructions below:
 
 4. Install `bundler`:
         
+        :::bash
         gem install bundler
         rbenv rehash
 
 5. Clone the Autolab repo into any desired directory:
-
+        
+        :::bash
         git clone https://github.com/autolab/Autolab.git
 
 6. Install the required gems (run the following commands in the cloned Autolab repo):
 
+        :::bash
         cd bin
         bundle install
    Refer to the [FAQ](#faq) for issues installing gems
@@ -66,30 +72,36 @@ Follow the step-by-step instructions below:
 
 8. Configure your database:
       
+        :::bash
         cp config/database.yml.template config/database.yml
    Edit `database.yml` with the correct credentials for your chosen database. Refer to the [FAQ](#faq) for any issues.
 
 9. Configure the Devise Auth System with a unique key (run these commands exactly):
 
+        :::bash
         cp config/nitializers/devise.rb.template config/initializers/devise.rb
         sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" initializers/devise.rb
    Fill in `<YOUR_WEBSITE>` in `config/initializers/devise.rb` file. To skip this step for now, fill with `foo.bar`.
 
 10. Create and initialize the database tables:
 
+        :::bash
         bundle exec rake db:create
     Do not forget to use bundle exec in front of every rake/rails command.
 
 11. Populate dummy data (development only):
         
+        :::bash
         bundle exec rake autolab:populate
 
 12. Start the rails server:
 
+        :::bash
         bundle exec rails s -p 3000
 
 14. Go to localhost:3000 and login with `Developer Login`:
       
+        :::bash
         Email: "admin@foo.bar".
 
 13. Install [Tango](/tango), the backend autograding service.

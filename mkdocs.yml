@@ -1,9 +1,13 @@
 site_name: Autolab Docs
 pages:
-    - Autolab: index.md
-    - Tango: tango.md
-    - Guide for Instructors: instructors.md
-    - Guide for Lab Authors: lab.md
+    - Autolab:
+        - Getting Started: index.md
+        - Guide for Instructors: instructors.md
+        - Guide for Lab Authors: lab.md
+    - Tango:
+        - Getting Started: tango.md
+        - REST API: tango-rest.md
+        - VMMS API: tango-vmms.md
 theme: null
 theme_dir: 'mkdocs-material/material'
 repo_name: 'Autolab'

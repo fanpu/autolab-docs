@@ -44,7 +44,7 @@
   
   
   
-    <body data-md-color-primary="red" data-md-color-accent="">
+    <body data-md-color-primary="red" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -261,6 +261,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../tango-cli/" title="Tango CLI" class="md-nav__link">
+        Tango CLI
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../tango-rest/" title="REST API" class="md-nav__link">
         REST API
       </a>
@@ -361,8 +372,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-setup" title="Docker Setup" class="md-nav__link">
-    Docker Setup
+  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
+    Docker VMMS Setup
   </a>
   
 </li>
@@ -467,8 +478,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-setup" title="Docker Setup" class="md-nav__link">
-    Docker Setup
+  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
+    Docker VMMS Setup
   </a>
   
 </li>
@@ -539,11 +550,13 @@
 </td></tr></table>
 
 <p>Returns a complete list of VMs associated with this Tango system. </p>
-<h3 id="docker-setup">Docker Setup</h3>
+<h3 id="docker-vmms-setup">Docker VMMS Setup</h3>
 <ol>
 <li>
 <p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker ps
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span>
 </pre></div>
 </td></tr></table>
 

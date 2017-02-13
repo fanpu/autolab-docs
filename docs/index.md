@@ -87,7 +87,7 @@ Follow the step-by-step instructions below:
 
         :::bash
         bundle exec rake db:create
-    Do not forget to use bundle exec in front of every rake/rails command.
+    Do not forget to use `bundle exec` in front of every rake/rails command.
 
 11. Populate dummy data (development only):
         

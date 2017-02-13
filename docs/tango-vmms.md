@@ -59,12 +59,13 @@ getVMs(self)
 ```
 Returns a complete list of VMs associated with this Tango system. 
 
-### Docker Setup
+### Docker VMMS Setup
 
 1. Install docker on host machine by following instructions on the [docker installation page](https://docs.docker.com/installation/). Ensure docker is running:
         
         :::bash
-        docker ps
+        $ docker ps
+        # CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 
 2. Build base Docker image from root Tango directory.
 
@@ -78,7 +79,7 @@ Returns a complete list of VMs associated with this Tango system.
         :::python
         # in config.py
         VMMS_NAME = "localDocker"
-        
+
 
 
 

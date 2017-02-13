@@ -6,6 +6,7 @@ pages:
         - Guide for Lab Authors: lab.md
     - Tango:
         - Getting Started: tango.md
+        - Tango CLI: tango-cli.md 
         - REST API: tango-rest.md
         - VMMS API: tango-vmms.md
 theme: null
@@ -16,6 +17,7 @@ extra:
   logo: 'images/logo.svg'
   palette:
      primary: 'red'
+     accent: 'blue'
   social:
     - type: 'github'
       link: 'https://github.com/Autolab'

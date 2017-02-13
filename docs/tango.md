@@ -57,7 +57,7 @@ For more information about the different Tango components, go to the following p
         $ pip install -r requirements.txt
         $ mkdir volumes
 
-7. Run the following command to start the server (producer):
+7. Run the following command to start the server (producer). If no port is given, the server will run on the port specified in `config.py` (default: 3000):
         
         :::bash
         python restful-tango/server.py <port>
@@ -67,7 +67,13 @@ For more information about the different Tango components, go to the following p
         python jobManager.py
     For more information on the job producer/consumer model check out our [blog post](http://autolab.github.io/2015/04/making-backend-scalable/)
 
-8. Now you are ready to start testing Tango using the [command line client](/tango-cli)
+8. Ensure Tango is running:
+    
+        :::bash
+        $ curl localhost:<port>
+        # Hello, world! RESTful Tango here!
+
+9. If you are using Tango with Autolab, you are now ready to resume the steps to configuring Autolab. You can also test the Tango setup using the [command line client](/tango-cli).
 
 
 

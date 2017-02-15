@@ -241,7 +241,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" title="FAQ" class="md-nav__link">
     FAQ
   </a>
@@ -274,11 +279,6 @@
   <a href="#cant-connect-to-local-mysql-server-through-socket" title="Can't connect to local MySQL server through socket" class="md-nav__link">
     Can't connect to local MySQL server through socket
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -428,7 +428,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" title="FAQ" class="md-nav__link">
     FAQ
   </a>
@@ -468,11 +473,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -488,18 +488,19 @@
               
                 
                 <h1 id="welcome-to-the-autolab-docs">Welcome to the Autolab Docs</h1>
+<p><img alt="Welcome to Autolab" src="./images/autolab_logo.png" /></p>
 <p>Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>For information on how to use Autolab go to the <a href="./instructors">instructors page</a>. To learn how to write an autograded lab go to the <a href="./lab">lab authors page</a></p>
-<p>Autolab consists of two services, the Ruby on Rails frontend and <a href="./tango">Tango</a>, the Python grading server. In order, to use all features
-of Autolab, we highly recommend installing both services.</p>
+<p>For information on how to use Autolab go to the <a href="./instructors">instructors page</a>. To learn how to write an autograded lab go to the <a href="./lab">lab authors page</a>.</p>
+<p>Autolab consists of two services, the Ruby on Rails frontend and <a href="./tango">Tango</a>, the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.</p>
 <p>Currently, we have support for installation on <a href="#ubuntu-1404">Ubuntu 14.04+</a> and <a href="#mac-osx">Mac OSX</a></p>
 <h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
-<p>The following command runs a script that installs Autolab and all it's dependancies. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a></p>
+<p>The following command runs a script that installs Autolab and all gems. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
 </pre></div>
 </td></tr></table>
 
+<p>You will have to install Tango, the RESTful autograding server, seperately. Find more information <a href="./tango">here</a>.</p>
 <h3 id="mac-osx">Mac OSX</h3>
 <p>Follow the step-by-step instructions below:</p>
 <ol>
@@ -586,6 +587,14 @@ sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret
 <p>Fill in <code>&lt;YOUR_WEBSITE&gt;</code> in <code>config/initializers/devise.rb</code> file. To skip this step for now, fill with <code>foo.bar</code>.</p>
 </li>
 <li>
+<p>Configure school/organization specific information (new feature):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp config/school.yml.template config/school.yml
+</pre></div>
+</td></tr></table>
+
+<p>Edit <code>school.yml</code> with your school/organization specific names and emails</p>
+</li>
+<li>
 <p>Create and initialize the database tables:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bundle <span class="nb">exec</span> rake db:create
 </pre></div>
@@ -617,8 +626,11 @@ sed -i <span class="s2">&quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret
 <li>
 <p>Install <a href="./tango">Tango</a>, the backend autograding service.</p>
 </li>
+<li>
+<p>Now you are all set to start using Autolab! Visit the <a href="./instructors">instructors</a> or <a href="./lab">lab authors</a> pages for more info.</p>
+</li>
 </ol>
-<h3 id="faq">FAQ</h3>
+<h2 id="faq">FAQ</h2>
 <p>This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,
 please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;">&#97;&#117;&#116;&#111;&#108;&#97;&#98;&#45;&#100;&#101;&#118;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#99;&#109;&#117;&#46;&#101;&#100;&#117;</a></p>
 <h4 id="ubuntu-script-bugs">Ubuntu Script Bugs</h4>

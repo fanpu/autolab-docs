@@ -1,25 +1,26 @@
 # Welcome to the Autolab Docs
 
+![Welcome to Autolab](/images/autolab_logo.png)
+
 Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
 ## Getting Started
 
-For information on how to use Autolab go to the [instructors page](/instructors). To learn how to write an autograded lab go to the [lab authors page](/lab)
+For information on how to use Autolab go to the [instructors page](/instructors). To learn how to write an autograded lab go to the [lab authors page](/lab).
 
-Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order, to use all features
-of Autolab, we highly recommend installing both services.
+Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.
 
 Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx)
 
 ### Ubuntu 14.04+
 
-The following command runs a script that installs Autolab and all it's dependancies. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh)
+The following command runs a script that installs Autolab and all gems. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh)
 
 ```bash
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
 ```
 
-
+You will have to install Tango, the RESTful autograding server, seperately. Find more information [here](/tango).
 
 ### Mac OSX
 
@@ -83,18 +84,24 @@ Follow the step-by-step instructions below:
         sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" initializers/devise.rb
    Fill in `<YOUR_WEBSITE>` in `config/initializers/devise.rb` file. To skip this step for now, fill with `foo.bar`.
 
-10. Create and initialize the database tables:
+10. Configure school/organization specific information (new feature):
+        
+        :::bash
+        cp config/school.yml.template config/school.yml
+    Edit `school.yml` with your school/organization specific names and emails
+
+11. Create and initialize the database tables:
 
         :::bash
         bundle exec rake db:create
     Do not forget to use `bundle exec` in front of every rake/rails command.
 
-11. Populate dummy data (development only):
+12. Populate dummy data (development only):
         
         :::bash
         bundle exec rake autolab:populate
 
-12. Start the rails server:
+13. Start the rails server:
 
         :::bash
         bundle exec rails s -p 3000
@@ -104,9 +111,12 @@ Follow the step-by-step instructions below:
         :::bash
         Email: "admin@foo.bar".
 
-13. Install [Tango](/tango), the backend autograding service.
+15. Install [Tango](/tango), the backend autograding service.
 
-### FAQ
+16. Now you are all set to start using Autolab! Visit the [instructors](/instructors) or [lab authors](/lab) pages for more info.
+
+
+## FAQ
 
 This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,
 please contact us at <autolab-dev@andrew.cmu.edu>

@@ -1,6 +1,6 @@
 # Tango
 
-Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for [Autolab](/) and has been extensively used for autograding programming assignments.
+Tango is a standalone RESTful Web service that runs jobs in virtual machines or containers. It was developed as a distributed grading system for [Autolab](/) and has been extensively used for autograding programming assignments. It is also open source and hosted on [Github](https://www.github.com/autolab/Tango).
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ A brief overview of the Tango respository:
 * `vmms/` - VMMS library implementations
 * `restful-tango/` - HTTP server layer on the main Tango
 
-Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in Docker containers (**recommended**), [Tashi VMs](http://opencirrus.intel-research.net/tashi/), or Amazon EC2.
+Tango runs jobs in VMs using a high level Virtual Memory Management System (VMMS) API. Tango currently has support for running jobs in [Docker](https://www.docker.com/) containers (**recommended**), [Tashi VMs](http://opencirrus.intel-research.net/tashi/), or [Amazon EC2](https://aws.amazon.com/ec2).
 
 For more information about the different Tango components, go to the following pages:
 
@@ -73,20 +73,23 @@ For more information about the different Tango components, go to the following p
         $ curl localhost:<port>
         # Hello, world! RESTful Tango here!
 
-9. If you are using Tango with Autolab, you are now ready to resume the steps to configuring Autolab. You can also test the Tango setup using the [command line client](/tango-cli).
+9. You can test the Tango setup using the [command line client](/tango-cli).
 
+10. If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:
 
+        :::bash
+        cp config/autogradeConfig.rb.template config/autogradeConfig.rb
+ 
+    Fill in the correct info for your Tango deployment, mainly the following:
 
+        :::ruby
+        # Hostname for Tango RESTful API
+        RESTFUL_HOST = "foo.bar.edu"
 
+        # Port for Tango RESTful API
+        RESTFUL_PORT = "3000"
 
-
-
-
-
-
-
-
-
-
+        # Key for Tango RESTful API
+        RESTFUL_KEY = "test"
 
 

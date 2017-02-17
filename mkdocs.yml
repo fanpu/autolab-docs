@@ -9,6 +9,7 @@ pages:
         - Tango CLI: tango-cli.md 
         - REST API: tango-rest.md
         - VMMS API: tango-vmms.md
+    - OneClick Install: one-click.md
 theme: null
 theme_dir: 'mkdocs-material/material'
 repo_name: 'Autolab'
@@ -23,6 +24,9 @@ extra:
       link: 'https://github.com/Autolab'
     - type: 'facebook'
       link: 'https://facebook.com/autolabproject'
+google_analytics:
+  - 'UA-79424729-3'
+  - 'auto'
 markdown_extensions:
   - admonition
   - codehilite(linenums=true)

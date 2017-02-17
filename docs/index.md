@@ -1,7 +1,5 @@
 # Welcome to the Autolab Docs
 
-![Welcome to Autolab](/images/autolab_logo.png)
-
 Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
 ## Getting Started
@@ -10,9 +8,13 @@ For information on how to use Autolab go to the [instructors page](/instructors)
 
 Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx)
+Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx).
 
 ### Ubuntu 14.04+
+
+The fastest way to install Autolab on Ubuntu is the OneClick option. This is recommended for running on external services like Heroku, EC2, or other Ubuntu VM providers. Find more information [here](/one-click).
+
+#### Development Only
 
 The following command runs a script that installs Autolab and all gems. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh)
 

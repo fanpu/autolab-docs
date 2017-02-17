@@ -232,6 +232,19 @@
     Ubuntu 14.04+
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-only" title="Development Only" class="md-nav__link">
+    Development Only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -386,6 +399,17 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="one-click/" title="OneClick Install" class="md-nav__link">
+        OneClick Install
+      </a>
+    
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -418,6 +442,19 @@
   <a href="#ubuntu-1404" title="Ubuntu 14.04+" class="md-nav__link">
     Ubuntu 14.04+
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-only" title="Development Only" class="md-nav__link">
+    Development Only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -488,13 +525,14 @@
               
                 
                 <h1 id="welcome-to-the-autolab-docs">Welcome to the Autolab Docs</h1>
-<p><img alt="Welcome to Autolab" src="./images/autolab_logo.png" /></p>
 <p>Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>For information on how to use Autolab go to the <a href="./instructors">instructors page</a>. To learn how to write an autograded lab go to the <a href="./lab">lab authors page</a>.</p>
 <p>Autolab consists of two services, the Ruby on Rails frontend and <a href="./tango">Tango</a>, the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.</p>
-<p>Currently, we have support for installation on <a href="#ubuntu-1404">Ubuntu 14.04+</a> and <a href="#mac-osx">Mac OSX</a></p>
+<p>Currently, we have support for installation on <a href="#ubuntu-1404">Ubuntu 14.04+</a> and <a href="#mac-osx">Mac OSX</a>.</p>
 <h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
+<p>The fastest way to install Autolab on Ubuntu is the OneClick option. This is recommended for running on external services like Heroku, EC2, or other Ubuntu VM providers. Find more information <a href="./one-click">here</a>.</p>
+<h4 id="development-only">Development Only</h4>
 <p>The following command runs a script that installs Autolab and all gems. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
 </pre></div>
@@ -736,6 +774,8 @@ Unable to find expected entry <span class="s1">&#39;main/binary-i386/Packages&#3
       
     
     
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-79424729-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>

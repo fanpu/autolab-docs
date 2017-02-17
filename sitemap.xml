@@ -5,19 +5,19 @@
         
     <url>
      <loc>/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/instructors/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/lab/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -27,28 +27,36 @@
         
     <url>
      <loc>/tango/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-cli/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-rest/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-vmms/</loc>
-     <lastmod>2017-02-15</lastmod>
+     <lastmod>2017-02-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>/one-click/</loc>
+     <lastmod>2017-02-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

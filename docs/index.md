@@ -16,13 +16,13 @@ The fastest way to install Autolab on Ubuntu is the OneClick option. This is rec
 
 #### Development Only
 
-The following command runs a script that installs Autolab and all gems. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh)
+The following command runs a script that installs Autolab and all gems. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh).
 
 ```bash
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
 ```
 
-You will have to install Tango, the RESTful autograding server, seperately. Find more information [here](/tango).
+Next, [install Tango](/tango), the RESTful autograding server, seperately.
 
 ### Mac OSX
 

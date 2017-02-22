@@ -327,13 +327,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#1-prepare-an-ubuntu-vm" title="1. Prepare an Ubuntu VM" class="md-nav__link">
     1. Prepare an Ubuntu VM
   </a>
@@ -354,15 +347,62 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverproduction-oneclick-setup" title="Server/Production OneClick Setup" class="md-nav__link">
+    Server/Production OneClick Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#teardown" title="Teardown" class="md-nav__link">
-    Teardown
+  <a href="#1-provision-a-server" title="1. Provision a Server" class="md-nav__link">
+    1. Provision a Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-service" title="Email Service" class="md-nav__link">
+    Email Service
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-download-and-configuration" title="2. Download and Configuration" class="md-nav__link">
+    2. Download and Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installation_1" title="3. Installation" class="md-nav__link">
+    3. Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
   
 </li>
       
@@ -402,13 +442,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#1-prepare-an-ubuntu-vm" title="1. Prepare an Ubuntu VM" class="md-nav__link">
     1. Prepare an Ubuntu VM
   </a>
@@ -429,15 +462,62 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverproduction-oneclick-setup" title="Server/Production OneClick Setup" class="md-nav__link">
+    Server/Production OneClick Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
-  <a href="#teardown" title="Teardown" class="md-nav__link">
-    Teardown
+  <a href="#1-provision-a-server" title="1. Provision a Server" class="md-nav__link">
+    1. Provision a Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-service" title="Email Service" class="md-nav__link">
+    Email Service
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-download-and-configuration" title="2. Download and Configuration" class="md-nav__link">
+    2. Download and Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installation_1" title="3. Installation" class="md-nav__link">
+    3. Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
   
 </li>
       
@@ -458,13 +538,6 @@
 <p>OneClick is the fastest way to install Autolab and Tango on an Ubuntu VM. The installation uses packages Autolab, MySQL, and Tango into seperate Docker containers with specific exposed ports for communication.</p>
 <p>There are two types of installations. A local development setup and a real-world ready setup that requires SSL certificates, email service configuration, and domain name registration. Use the local setup for experimentation before deploying in a real-world scenario on such apps like Heroku, EC2, or DigitalOcean, among others.</p>
 <h2 id="local-oneclick-setup">Local OneClick Setup</h2>
-<h3 id="overview">Overview</h3>
-<p>The only 3 steps you will go through:</p>
-<ul>
-<li>Prepare a ubuntu VM</li>
-<li>Download the installation package</li>
-<li>One command Install</li>
-</ul>
 <h3 id="1-prepare-an-ubuntu-vm">1. Prepare an Ubuntu VM</h3>
 <p>These installation instructions are for Ubuntu. If you're on other operating system, we recommend you set up an Ubuntu virtual machine first with <a href="http://www.ubuntu.com/download/alternative-downloads">Virtual Box</a>.</p>
 <p>About the System Configuration:</p>
@@ -518,15 +591,144 @@
 
 <p>Now Autolab is successfully installed and running on your virtual machine.
 Open your browser and visit <code>localhost:3000</code>, you will see the landing page of Autolab.</p>
-<p>We have populated some dummy data for you to play around Autolab as an instructor.</p>
+<p>Follow the instructions <a href="../one-click/#testing">here</a> to test out your set up.</p>
+<h2 id="serverproduction-oneclick-setup">Server/Production OneClick Setup</h2>
+<h3 id="1-provision-a-server">1. Provision a Server</h3>
+<p><strong>Server</strong></p>
+<p>If you don't already have a server, we recommend a VPS (virtual private server). Here are a couple popular VPS providers:</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04">DigitalOcean</a> (recommended)</li>
+<li><a href="https://amazonlightsail.com">Amazon Lightsail</a></li>
+<li><a href="https://cloud.google.com/">Google Cloud Platform</a></li>
+</ul>
+<p><strong>Domain name</strong></p>
+<p>(A domain name is both required by SSL and email service.)</p>
+<p>In your DNS provider:</p>
+<ul>
+<li>Add www and @ records pointing to the ip address of your server.</li>
+<li>Add DKIM and SFF records by creating TXT records after you finish the email service part.</li>
+</ul>
+<p><strong>SSL</strong></p>
+<p>You can run Autolab with or without HTTPS encryption. We strongly recommend you run it with HTTPS.</p>
+<p>Here are a few options to get the SSL certificate and key:</p>
+<ol>
+<li>
+<p>Go through your school/organization</p>
+<p>Many universities have a program whereby they'll grant SSL certificates to students and faculty for free. Some of these programs require you to be using a school-related domain name, but some don't. You should be able to find out more information from your school's IT department.</p>
+</li>
+<li>
+<p>Use paid service: SSLmate</p>
+<p>You can follow this <a href="https://sslmate.com/help/getting_started">simple guide</a> to get your paid SSL with <a href="https://sslmate.com/">SSLMate</a> in the simplest way.</p>
+</li>
+</ol>
+<h4 id="email-service">Email Service</h4>
+<p>Autolab uses email for various features, include sending out user confirmation emails and instructor-to-student bulk emails. You can use MailChimp + Mandrill to configure transactional email. </p>
+<ol>
+<li>
+<p>Create a MailChimp account <a href="https://login.mailchimp.com/signup">here</a></p>
+</li>
+<li>
+<p>Add Mandrill using <a href="http://kb.mailchimp.com/mandrill/mailchimp-vs-mandrill">these instructions</a></p>
+</li>
+<li>
+<p>Go to the settings page and create a new API key</p>
+</li>
+<li>
+<p>From the Mailchimp/Mandrill Domains settings page, add your domain </p>
+</li>
+<li>
+<p>Configure the DKIM and SFF settings by creating TXT records with your DNS provider (they link to some instructions for how to do this, but the process will differ depending on which DNS provider you are using. Try Google!).</p>
+</li>
+</ol>
+<h3 id="2-download-and-configuration">2. Download and Configuration</h3>
+<ol>
+<li>
+<p>Use root to install Autolab</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo -i
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Clone the installation package</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/autolab/autolab-oneclick.git<span class="p">;</span> <span class="nb">cd</span> autolab-oneclick
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Generate a new secret key for Devise Auth Configuration:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python -c <span class="s2">&quot;import random; print hex(random.getrandbits(512))[2:-1]&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Update the values in <code>server/configs/devise.rb</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="o">&lt;</span><span class="no">GENERATED_SECRET_KEY</span><span class="o">&gt;</span>
+<span class="n">config</span><span class="o">.</span><span class="n">mailer_sender</span> <span class="o">=</span> <span class="o">&lt;</span><span class="no">EMAIL_ADDRESS_WITH_YOUR_HOSTNAME</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Copy your SSL certificate and key file into the <code>server/ssl</code> directory.</p>
+</li>
+<li>
+<p>Configure Nginx in <code>server/configs/nginx.conf</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">server_name</span> <span class="o">&lt;</span><span class="no">YOUR_SERVER_DOMAIN</span><span class="o">&gt;</span>
+<span class="n">ssl_certificate</span> <span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">ssl_certificate</span><span class="o">/</span><span class="n">file</span>
+<span class="n">ssl_certificate_key</span> <span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">ssl_certificate_key</span><span class="o">/</span><span class="n">file</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Configure Email in <code>server/configs/production.rb</code>. Update the address, port, user_name, password and domain with your email service informations. For Mandrill, go to "SMTP &amp; API Info" to see the informations.</p>
+</li>
+</ol>
+<h3 id="3-installation_1">3. Installation</h3>
+<ol>
+<li>
+<p>Start Installation</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> autolab-oneclick
+./install -s
+</pre></div>
+</td></tr></table>
+
+<p>Answer the prompts and wait until you see <code>Autolab Installation Finished</code>.</p>
+</li>
+<li>
+<p>Ensure docker containers are running</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                    PORTS                     NAMES</span>
+<span class="c1"># c8679844bbfa        local_web           &quot;/sbin/my_init&quot;          3 months ago        Exited (0) 3 months ago                             local_web_1         721 kB (virtual 821 MB)</span>
+<span class="c1"># 45a9e30241ea        mysql               &quot;docker-entrypoint...&quot;   3 months ago        Exited (0) 3 months ago   0.0.0.0:32768-&gt;3306/tcp   local_db_1          0 B (virtual 383 MB)</span>
+<span class="c1"># 1ef089e2dca4        local_tango         &quot;sh start.sh&quot;            3 months ago        Exited (0) 3 months ago   0.0.0.0:8600-&gt;8600/tcp    local_tango_1       91.1 kB (virtual 743 MB)</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+<p>Now Autolab is successfully installed and running on your virtual machine.
+Open your browser and visit <code>https://yourdomainname</code>, to see the landing page of Autolab.</p>
+<p>Follow the instructions <a href="../one-click/#testing">here</a> to test out your set up.</p>
+<h2 id="testing">Testing</h2>
+<p>Login with the following credentials:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>email: admin@foo.bar
 password: adminfoobar
 </pre></div>
 </td></tr></table>
 
-<h3 id="teardown">Teardown</h3>
-<p>To clean up the initial populated data</p>
+<p>We have populated dummy data for you to test with.</p>
+<p>Run the following commands to cleanup the dummy data:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd local
 docker-compose run --rm -e RAILS_ENV=production web rake autolab:depopulate

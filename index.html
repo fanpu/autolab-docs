@@ -533,12 +533,12 @@
 <h3 id="ubuntu-1404">Ubuntu 14.04+</h3>
 <p>The fastest way to install Autolab on Ubuntu is the OneClick option. This is recommended for running on external services like Heroku, EC2, or other Ubuntu VM providers. Find more information <a href="./one-click">here</a>.</p>
 <h4 id="development-only">Development Only</h4>
-<p>The following command runs a script that installs Autolab and all gems. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a></p>
+<p>The following command runs a script that installs Autolab and all gems. You will be prompted for the <code>sudo</code> password and other confirmations. You can see the details of the script <a href="https://github.com/autolab/Autolab/blob/master/bin/setup.sh">here</a>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">AUTOLAB_SCRIPT</span><span class="o">=</span><span class="sb">`</span>mktemp<span class="sb">`</span> <span class="o">&amp;&amp;</span> <span class="se">\c</span>url -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh &gt; <span class="nv">$AUTOLAB_SCRIPT</span> <span class="o">&amp;&amp;</span> <span class="se">\b</span>ash <span class="nv">$AUTOLAB_SCRIPT</span>
 </pre></div>
 </td></tr></table>
 
-<p>You will have to install Tango, the RESTful autograding server, seperately. Find more information <a href="./tango">here</a>.</p>
+<p>Next, <a href="./tango">install Tango</a>, the RESTful autograding server, seperately.</p>
 <h3 id="mac-osx">Mac OSX</h3>
 <p>Follow the step-by-step instructions below:</p>
 <ol>

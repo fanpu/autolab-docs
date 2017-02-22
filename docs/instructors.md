@@ -32,13 +32,13 @@ A <i>lab</i> (or <i>assessment</i>)
 is broadly defined as a submission set; it is anything that
 your students make submissions (handins) for. This could be a programming assignment, a
 typed homework, or even an in-class exam. You can create labs from scratch, or reuse them from previous semesters.
-See the companion [[Guide for Lab Authors]] for info on writing and installing labs. </p>
+See the companion [Guide For Lab Authors](/lab) for info on writing and installing labs. </p>
 
 ## Assessment Categories
 You can tag each assessment with an arbitrary user-defined <i>category</i>, e.g., "Lab", "Exam", "Homework".
 
 ## Autograders and Scoreboards
-Labs can be <i>autograded</i> or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied <i>autograder</i> program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional <i>scoreboard</i> that shows (anonymized) results in real-time. See the companion [[Guide for Lab Authors]] for details on writing autograded labs with scoreboards.
+Labs can be <i>autograded</i> or not, at your disrcretion. When a student submits to an autograded lab, Autolab runs an instructor-supplied <i>autograder</i> program that assigns scores to one or more problems associated with the lab. Autograded labs can have an optional <i>scoreboard</i> that shows (anonymized) results in real-time. See the companion [Guide For Lab Authors](/lab) for details on writing autograded labs with scoreboards.
 
 ## Important Dates
 A lab has a <i>start date</i>, <i>due date</i>, <i>end date</i> and <i>grading deadline</i>. The link to a lab becomes visible to students after the start date (it's always visible to instructors). Students can submit until the due date without penalty or consuming grace days. Submission is turned off after the end date. Grades are included in the gradebook's category and course averages only after the grading deadline.

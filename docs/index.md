@@ -166,5 +166,10 @@ If this still does not work, try exploring [this StackOverflow link](http://stac
 ####Can't connect to local MySQL server through socket
 Make sure you've started the MySQL server and double-check the socket in `config/database.yml`
 
-The default socket location is `/tmp/mysql.sock`.   
+The default socket location is `/tmp/mysql.sock`.
+
+#### I forgot my MySQL root password
+You can reset it following the instructions on [this Stack Overflow post](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-os-x)
+
+If `mysql` complains that the password is expired, follow the instructions on the second answer on [this post](http://stackoverflow.com/questions/33326065/unable-to-access-mysql-after-it-automatically-generated-a-temporary-password)
 

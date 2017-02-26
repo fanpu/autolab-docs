@@ -2,29 +2,29 @@
 
 Autolab is a course management platform that enables instructors to offer autograded programming assignments to their students. The two key  ideas in Autolab are *autograding* that is, programs evaluating other programs, and *scoreboards* that display the latest autograded scores for each student. Autolab also provides gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
+For information on how to use Autolab for your course see the [Guide for Instructors](/instructors). To learn how to write an autograded lab see the [Guide for Lab Authors](/lab).
+
 ## Getting Started
 
-For information on how to use Autolab go to the [Guide for Instructors](/instructors). To learn how to write an autograded lab go to the [Guide for Lab Authors](/lab).
+Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
-Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.
+Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx).
 
-Currently, we have support for installation on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx).
+### Installing on Ubuntu 14.04+
 
-### Ubuntu 14.04+
+There are two ways to install Autolab on Ubuntu:
 
-The fastest way to install Autolab on Ubuntu is the OneClick option. This is recommended for running on external services like Heroku, EC2, or other Ubuntu VM providers. Find more information [here](/one-click).
+Option 1. The recommended way is to use the [OneClick option](/one-click). This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. The idea is that you download a single installation repo and then run a single setup script. When the script finishes, you have a complete working instance of Autolab and Tango that you can a point a browser at and begin using right away. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, or other Ubuntu VM providers like DigitalOcean.
 
-#### Development Only
-
-The following command runs a script that installs Autolab and all gems. You will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh).
+Option 2:  Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is much more difficult than Option 1. To install the Autolab frontend in developer mode, you run the following script:
 
 ```bash
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
 ```
 
-Next, [install Tango](/tango), the RESTful autograding server, seperately.
+When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). Next, if you want autograding, then you will need to manually [install Tango](/tango).
 
-### Mac OSX
+### Installing on Mac OSX 10.11+
 
 Follow the step-by-step instructions below:
 
@@ -115,8 +115,7 @@ Follow the step-by-step instructions below:
 
 15. Install [Tango](/tango), the backend autograding service.
 
-16. Now you are all set to start using Autolab! Visit the [instructors](/instructors) or [lab authors](/lab) pages for more info.
-
+16. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/instructors) and [Guide for Lab Authors](/lab) pages for more info.
 
 ## FAQ
 

@@ -16,7 +16,7 @@ There are two ways to install Autolab on Ubuntu:
 
 Option 1. The recommended way is to use the [OneClick option](/one-click). This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. The idea is that you download a single installation repo and then run a single setup script. When the script finishes, you have a complete working instance of Autolab and Tango that you can a point a browser at and begin using right away. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, or other Ubuntu VM providers like DigitalOcean.
 
-Option 2:  Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is much more difficult than Option 1. To install the Autolab frontend in developer mode, you run the following script:
+Option 2:  Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, you run the following script:
 
 ```bash
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT

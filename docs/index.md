@@ -22,7 +22,7 @@ Option 2:  Another option is to install the frontend and Tango manually, without
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
 ```
 
-When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). Next, if you want autograding, then you will need to manually [install Tango](/tango).
+When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). If you want autograding, then you will need to manually [install Tango](/tango).
 
 ### Installing on Mac OSX 10.11+
 

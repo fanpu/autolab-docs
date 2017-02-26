@@ -4,7 +4,7 @@ Autolab is a course management platform that enables instructors to offer autogr
 
 ## Getting Started
 
-For information on how to use Autolab go to the [instructors page](/instructors). To learn how to write an autograded lab go to the [lab authors page](/lab).
+For information on how to use Autolab go to the [Guide for Instructors](/instructors). To learn how to write an autograded lab go to the [Guide for Lab Authors](/lab).
 
 Autolab consists of two services, the Ruby on Rails frontend and [Tango](/tango), the Python grading server. In order to use all features of Autolab, we highly recommend installing both services.
 

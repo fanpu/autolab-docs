@@ -1,3 +1,5 @@
+# Guide for Lab Authors
+
 This guide explains how to create autograded programming assignments (labs) for the Autolab system. 
 
 ## Writing Autograders

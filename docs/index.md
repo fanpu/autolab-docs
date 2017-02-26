@@ -1,6 +1,6 @@
 # Welcome to the Autolab Docs
 
-Autolab is a course management and homework autograding platform that enables instructors to offer programming labs to their students. It includes gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
+Autolab is a course management platform that enables instructors to offer autograded programming assignmentsto their students. The two key  ideas in Autolab are *autograding* that is, programs evaluating other programs, and *scoreboards* that display the latest autograded scores for each student. Autolab also provides gradebooks, rosters, handins/handouts, lab writeups, code annotation, manual grading, late penalties, grace days, cheat checking, meetings, partners, and bulk emails.
 
 ## Getting Started
 

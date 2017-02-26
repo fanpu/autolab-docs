@@ -116,7 +116,7 @@ Follow the step-by-step instructions below:
 15. Install [Tango](/tango), the backend autograding service.
 
 16. Now you are all set to start using Autolab! Visit the [Guide for Instructors](/instructors) and [Guide for Lab Authors](/lab) pages for more info.
-
+ 
 ## FAQ
 
 This is a general list of questions that we get often. If you find a solution to an issue not mentioned here,

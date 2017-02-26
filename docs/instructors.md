@@ -1,4 +1,4 @@
-# Instructor's Guide
+# Guide for Instructors
 This document provides instructors with a brief overview of the basic ideas and capabilities of the Autolab system. It's meant to be read from beginning to end the first time. 
 
 ## Users

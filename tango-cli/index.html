@@ -312,8 +312,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscallaneous-commands" title="Miscallaneous Commands" class="md-nav__link">
-    Miscallaneous Commands
+  <a href="#miscellaneous-commands" title="Miscellaneous Commands" class="md-nav__link">
+    Miscellaneous Commands
   </a>
   
 </li>
@@ -340,8 +340,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../tango-vmms/" title="VMMS API" class="md-nav__link">
-        VMMS API
+      <a href="../tango-vmms/" title="VMMS Docs" class="md-nav__link">
+        VMMS Docs
       </a>
     
   </li>
@@ -411,8 +411,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscallaneous-commands" title="Miscallaneous Commands" class="md-nav__link">
-    Miscallaneous Commands
+  <a href="#miscellaneous-commands" title="Miscellaneous Commands" class="md-nav__link">
+    Miscellaneous Commands
   </a>
   
 </li>
@@ -440,7 +440,7 @@
 <ol>
 <li>
 <p>Open a <code>courselab</code> on Tango. This will create a directory for tango to store the files for the job. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; --open
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; --open
 </pre></div>
 </td></tr></table>
 
@@ -450,9 +450,9 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
     --upload --filename &lt;clients/job1/hello.sh&gt;
-python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
+$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
     --upload --filename &lt;clients/job1/autograde-Makefile&gt;
 </pre></div>
 </td></tr></table>
@@ -506,7 +506,7 @@ Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: He
 </pre></div>
 </td></tr></table>
 
-<h2 id="miscallaneous-commands">Miscallaneous Commands</h2>
+<h2 id="miscellaneous-commands">Miscellaneous Commands</h2>
 <p>The CLI also implements a list of commands to invoke the <a href="../tango-rest">Tango REST API</a>, including <code>--info</code>, <code>--prealloc</code>, and <code>--jobs</code>. For a full list of commands, run:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python clients/tango-rest.py --help
 </pre></div>

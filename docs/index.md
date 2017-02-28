@@ -8,23 +8,27 @@ For information on how to use Autolab for your course see the [Guide for Instruc
 
 Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx).
+Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx-1011).
 
-### Installing on Ubuntu 14.04+
+### Ubuntu 14.04+
 
-There are two ways to install Autolab on Ubuntu:
+There are two ways to install Autolab on Ubuntu.
 
-Option 1. The recommended way is to use the [OneClick option](/one-click). This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. The idea is that you download a single installation repo and then run a single setup script. When the script finishes, you have a complete working instance of Autolab and Tango that you can a point a browser at and begin using right away. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, or other Ubuntu VM providers like DigitalOcean.
+**Option 1** 
 
-Option 2:  Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, you run the following script:
+The recommended way is to use the [OneClick option](/one-click). This option uses Docker to provide a complete installation of the Autolab frontend and Tango, for either development or production. Because it provides things like integration with SSL certificates and mail services, this option is specially useful for installing on external services like Heroku, EC2, DigitalOcean, or other Ubuntu VPS providers.
+
+**Option 2**  
+
+Another option is to install the frontend and Tango manually, without using Docker. This gives you more control over the installation, but is only appropriate for advanced users with knowledge of the Unix command line, Rails, and Ruby Gems. To install the Autolab frontend in developer mode, run the following script:
 
 ```bash
 AUTOLAB_SCRIPT=`mktemp` && \curl -sSL https://raw.githubusercontent.com/autolab/Autolab/master/bin/setup.sh > $AUTOLAB_SCRIPT && \bash $AUTOLAB_SCRIPT
 ```
 
-When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). If you want autograding, then you will need to manually [install Tango](/tango).
+When the script runs, you will be prompted for the `sudo` password and other confirmations. You can see the details of the script [here](https://github.com/autolab/Autolab/blob/master/bin/setup.sh). Once finished, [install Tango](/tango).
 
-### Installing on Mac OSX 10.11+
+### Mac OSX 10.11+
 
 Follow the step-by-step instructions below:
 

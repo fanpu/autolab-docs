@@ -15,14 +15,14 @@ Find out more information about the Tango REST API [here](/tango-rest).
 1. Open a `courselab` on Tango. This will create a directory for tango to store the files for the job. 
 
         :::bash
-        python clients/tango-cli.py -P <port> -k <key> -l <courselab> --open
+        $ python clients/tango-cli.py -P <port> -k <key> -l <courselab> --open
     
 2. Upload files necessary for the job.
 
         :::bash
-        python clients/tango-cli.py -P <port> -k <key> -l <courselab> \
+        $ python clients/tango-cli.py -P <port> -k <key> -l <courselab> \
             --upload --filename <clients/job1/hello.sh>
-        python clients/tango-cli.py -P <port> -k <key> -l <courselab> \
+        $ python clients/tango-cli.py -P <port> -k <key> -l <courselab> \
             --upload --filename <clients/job1/autograde-Makefile>
 
 3. Add the job to the queue. Note: `localFile` is the name of the file that was uploaded and `destFile` is the name of the file that will be on the VM. One of the `destFile` attributes must be `Makefile`. Furthermore, `image` references the name of the VM image you want the job to be run on. For Docker it is `autograding_image`.
@@ -60,7 +60,7 @@ $ python clients/tango-rest.py -P <port> -k <key> -l <courselab> \
      --runJob <clients/job1/> --image <image>
 ```
 
-## Miscallaneous Commands
+## Miscellaneous Commands
 
 The CLI also implements a list of commands to invoke the [Tango REST API](/tango-rest), including `--info`, `--prealloc`, and `--jobs`. For a full list of commands, run:
 

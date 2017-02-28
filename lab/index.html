@@ -220,6 +220,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
         Guide for Lab Authors
@@ -232,6 +234,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="toc">Table of contents</label>
@@ -462,6 +466,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -602,9 +608,8 @@
                
               
                 
-                  <h1>Guide for Lab Authors</h1>
-                
-                <p>This guide explains how to create autograded programming assignments (labs) for the Autolab system. </p>
+                <h1 id="guide-for-lab-authors">Guide for Lab Authors</h1>
+<p>This guide explains how to create autograded programming assignments (labs) for the Autolab system. </p>
 <h2 id="writing-autograders">Writing Autograders</h2>
 <p>An <em>autograder</em> is a program that takes a student's work as input, and generates some quantitative evaluation of that work as output. The student's work consists of one or more source files written in an arbitrary programming language. 
 The autograder processes these files and generates arbitrary text lines on stdout. The last text line on stdout must be a JSON string, called an <em>autoresult</em>, that assigns an autograded score to one or more problems, and optionally, generates the scoreboard entries for this submission.</p>

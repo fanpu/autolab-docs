@@ -9,6 +9,7 @@ pages:
         - Tango CLI: tango-cli.md 
         - REST API: tango-rest.md
         - VMMS Docs: tango-vmms.md
+        - Deploying Tango: tango-deploy.md
     - OneClick Install: one-click.md
 theme: null
 theme_dir: 'mkdocs-material/material'

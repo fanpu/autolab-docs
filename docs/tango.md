@@ -45,7 +45,7 @@ For more information about the different Tango components, go to the following p
 
 5. Set up a VMMS for Tango to use. 
     * [Docker](/tango-vmms/#docker-vmms-setup) (**recommended**)
-    * [Amazon EC2]()
+    * [Amazon EC2](/tango-vmms/#amazon-ec2-vmms-setup)
     * TashiVMMS (deprecated)
 
 6. Run the following commands to setup the Tango dev environment inside the Tango directory. [Install pip](https://pip.pypa.io/en/stable/installing/) if needed.

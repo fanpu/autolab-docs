@@ -21,8 +21,11 @@ For more information about the different Tango components, go to the following p
 * [REST API docs](/tango-rest)
 * [VMMS API docs](/tango-vmms)
 * [Tango Architecture Overview](http://autolab.github.io/2015/04/making-backend-scalable/)
+* [Deploying Tango](/tango-deploy) ()
 
 ### Installation
+
+This guide shows how to setup Tango in a **development environment**. Use the [deploying Tango](/tango-deploy) guide for installing in a **production environment**. 
 
 1. Obtain the source code.
     
@@ -92,4 +95,5 @@ For more information about the different Tango components, go to the following p
         # Key for Tango RESTful API
         RESTFUL_KEY = "test"
 
+11. To deploy Tango in a standalone production environment, use this [guide](/tango-deploy)
 

@@ -49,6 +49,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/tango-deploy/</loc>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     

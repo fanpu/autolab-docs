@@ -15,7 +15,7 @@
     
     
       
-        <title>Tango CLI - Autolab Docs</title>
+        <title>Deploying Tango - Autolab Docs</title>
       
     
     
@@ -81,7 +81,7 @@
                 </span>
               
             
-            Tango CLI
+            Deploying Tango
           
         </span>
       </div>
@@ -261,66 +261,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../tango-cli/" title="Tango CLI" class="md-nav__link">
         Tango CLI
-      </label>
-    
-    <a href="./" title="Tango CLI" class="md-nav__link md-nav__link--active">
-      Tango CLI
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#running-a-sample-job" title="Running a Sample Job" class="md-nav__link">
-    Running a Sample Job
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#individual-steps" title="Individual Steps" class="md-nav__link">
-    Individual Steps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#single-command" title="Single Command" class="md-nav__link">
-    Single Command
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous-commands" title="Miscellaneous Commands" class="md-nav__link">
-    Miscellaneous Commands
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -351,9 +294,46 @@
           
   <li class="md-nav__item">
     
-      <a href="../tango-deploy/" title="Deploying Tango" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Deploying Tango
-      </a>
+      </label>
+    
+    <a href="./" title="Deploying Tango" class="md-nav__link md-nav__link--active">
+      Deploying Tango
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" title="Steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -395,35 +375,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-a-sample-job" title="Running a Sample Job" class="md-nav__link">
-    Running a Sample Job
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#individual-steps" title="Individual Steps" class="md-nav__link">
-    Individual Steps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#single-command" title="Single Command" class="md-nav__link">
-    Single Command
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous-commands" title="Miscellaneous Commands" class="md-nav__link">
-    Miscellaneous Commands
+  <a href="#steps" title="Steps" class="md-nav__link">
+    Steps
   </a>
   
 </li>
@@ -441,92 +401,216 @@
                
               
                 
-                <h1 id="tango-command-line-client">Tango Command Line Client</h1>
-<p>This is a guide to use the command-line client (<code>clients/tango-cli.py</code>) to test and collect other valuable information from Tango. Please <a href="../tango/#installation">setup Tango</a> before moving forward. This guide assumes an instance of Tango is already up and running.</p>
-<h2 id="running-a-sample-job">Running a Sample Job</h2>
-<p>The CLI supports two ways to run a sample job, <a href="../tango-cli/#indivdual-steps">individual steps</a> or in a <a href="../tango-cli/#single-command">single all-in-one command</a>. The first option is better for debugging each individual API call, whereas the second option is best for quickly running a job. Other Tango CLI commands are also discussed <a href="../tango-cli/#miscallaneous-commands">below</a>.</p>
-<p>The Tango directory contains various different jobs in the <code>clients/</code> directory; <code>clients/README.md</code> discusses the function of each job.  </p>
-<p>Find out more information about the Tango REST API <a href="../tango-rest">here</a>.</p>
-<h3 id="individual-steps">Individual Steps</h3>
+                <h1 id="deploying-standalone-tango">Deploying Standalone Tango</h1>
+<p>This is a guide to setup a fully self-sufficient Tango deployment environment out-of-the-box using Docker. The suggested deployment pattern for Tango uses Nginx as a proxy and Supervisor as a process manager for Tango and all its dependencies. All requests to Nginx are rerouted to a Tango process. </p>
+<h2 id="details">Details</h2>
+<ul>
+<li>Nginx default port - 8600</li>
+<li>Tango ports - 8610, 8611</li>
+<li>Redis port - 6379</li>
+<li>You can change any of these in the respective config files in <code>deployment/config/</code> before you build the <code>tango_deployment</code> image.</li>
+</ul>
+<h2 id="steps">Steps</h2>
 <ol>
 <li>
-<p>Open a <code>courselab</code> on Tango. This will create a directory for tango to store the files for the job. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; --open
+<p>Clone the Tango repo</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git clone https://github.com/autolab/Tango.git<span class="p">;</span> <span class="nb">cd</span> Tango
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Upload files necessary for the job.</p>
+<p>Create a <code>config.py</code> file from the given template.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ cp config.template.py config.py
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Install docker on the host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker ps
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Run the following command to build the Tango deployment image. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker build --tag<span class="o">=</span><span class="s2">&quot;tango_deployment&quot;</span> .
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Ensure the image was built by running.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
-    --upload --filename &lt;clients/job1/hello.sh&gt;
-$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
-    --upload --filename &lt;clients/job1/autograde-Makefile&gt;
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker images
+<span class="c1"># REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span>
+<span class="c1"># tango_deployment    latest              3c0d4f4b4958        2 minutes ago       742.6 MB</span>
+<span class="c1"># ubuntu              15.04               d1b55fd07600        4 minutes ago       131.3 MB</span>
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Add the job to the queue. Note: <code>localFile</code> is the name of the file that was uploaded and <code>destFile</code> is the name of the file that will be on the VM. One of the <code>destFile</code> attributes must be <code>Makefile</code>. Furthermore, <code>image</code> references the name of the VM image you want the job to be run on. For Docker it is <code>autograding_image</code>.</p>
+<p>Run the following command to access the image in a container with a bash shell. The <code>-p</code> flag will map <code>nginxPort</code> on the docker container to <code>localPort</code> on your local machine (or on the VM that docker is running in on the local machine) so that Tango is accessible from outside the docker container. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker run --privileged -p &lt;localPort&gt;:&lt;nginxPort&gt; -it tango_deployment /bin/bash
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Set up a VMMS for Tango within the Docker container.</p>
+<ul>
+<li><a href="../tango-vmms/#docker-vmms-setup">Docker</a> (<strong>recommended</strong>)</li>
+<li><a href="../tango-vmms/#amazon-ec2-vmms-setup">Amazon EC2</a></li>
+</ul>
+</li>
+<li>
+<p>Run the following command to start supervisor, which will then start Tango and all its dependencies.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ service supervisor start
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Check to see if Tango is responding to requests</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ curl localhost:8610
+<span class="c1"># Hello, world! RESTful Tango here!</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Once you have a VMMS set up, leave the tango_deployment container by typing <code>exit</code> and once back in the host shell run the following command to get the name of your production container.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
-    --addJob --infiles <span class="se">\</span>
-    <span class="s1">&#39;{&quot;localFile&quot; : &quot;hello.sh&quot;, &quot;destFile&quot; : &quot;hello.sh&quot;}&#39;</span> <span class="se">\</span>
-    <span class="s1">&#39;{&quot;localFile&quot; : &quot;autograde-Makefile&quot;, &quot;destFile&quot; : &quot;Makefile&quot;}&#39;</span> <span class="se">\</span>
-    --image &lt;image&gt; --outputFile &lt;outputFileName&gt; <span class="se">\</span>
-    --jobname &lt;jobname&gt; --maxsize &lt;maxOutputSize&gt; --timeout &lt;jobTimeout&gt;
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker ps -as
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND               NAMES               SIZE</span>
+<span class="c1"># c704d45c3737    tango_deployment       &quot;/bin/bash&quot;            erwin             40.26 MB</span>
+
+The container created in this example has the name <span class="sb">`</span>erwin<span class="sb">`</span>.
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Get the job output.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-cli.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
-    --poll --outputFile &lt;outputFileName&gt;
+<p>The name of the production container can be changed by running the following command and will be used to run the container and create services.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker rename &lt;old_name&gt; &lt;new_name&gt;
 </pre></div>
 </td></tr></table>
 
-<p>The output file will have the following header:</p>
+</li>
+<li>
+<p>To reopen the container once it has been built use the following command. This will reopen the interactive shell within the container and allow for configuration of the container after its initial run.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker start erwin
+$ docker attach erwin
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Once the container is set up with the autograding image, and the VMMS configured with any necessary software/environments needed for autograding (java, perl, etc), some configurations need to be changed to make the container daemon ready. Using the <code>CONTAINER ID</code> above, use the following commands to modify that containers <code>config.v2.json</code> file.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo ls  /var/lib/docker/containers
+c704d45c37372a034cb97761d99f6f3f362707cc23d689734895e017eda3e55b
+$ sudo vim /var/lib/docker/containers/c704d45c37372a034cb97761d99f6f3f362707cc23d689734895e017eda3e55b/config.v2.json
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Edit the "Path" field in the config.v2.json file from "/bin/bash" to "/usr/bin/supervisord" and save the file. Run the following commands to verify the changes were successful. The COMMAND field should now be "/usr/bin/supervisord" </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Received job &lt;jobname&gt;:&lt;jobid&gt;
-Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Success: Autodriver returned normally
-Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: Here is the output from the autograder:
----
-...
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ service docker restart
+$ docker ps -as
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND               NAMES               SIZE</span>
+<span class="c1"># c704d45c3737    tango_deployment   &quot;/usr/bin/supervisord&quot;     erwin             40.26 MB</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>At this point when the container is started, the environment is fully set up and will no longer be an interactive shell. Instead, it will be the supervisor service that starts Tango and all its dependencies. Test this with the following commands and ensure Tango is functioning properly.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker start erwin
+<span class="c1"># (Test tango environment)</span>
+$ docker stop erwin
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Test the setup by running sample jobs using <a href="../tango-cli">the testing guide</a>.</p>
+</li>
+</ol>
+<p><strong>The following steps are optional and should only be used if you would like the Tango container to start on system boot.</strong></p>
+<ol>
+<li>
+<p>To ensure Tango starts with the system in the production environment, the container needs to be configured as a service. Below is a sample service config file that needs to be changed to suit your environment and placed in <code>/etc/systemd/system/</code>. The file should be named <code>&lt;name&gt;.service</code>. For this example, it is <code>erwin.service</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>Docker Service Managing Tango Container
+<span class="nv">Requires</span><span class="o">=</span>docker.service
+<span class="nv">After</span><span class="o">=</span>docker.service
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Restart</span><span class="o">=</span>always
+<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/docker start -a erwin
+<span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/docker stop -t <span class="m">2</span> erwin
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>default.target
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Test and ensure the service was set up correctly. The service should start successfully and remain running.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ systemctl daemon-reload
+$ service erwin start
+$ service erwin status
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Enable the service at system startup and reboot and ensure it starts with the host.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ systemctl <span class="nb">enable</span> erwin.service
+$ sudo reboot
+<span class="c1"># (Server Reboots)</span>
+$ service erwin status
 </pre></div>
 </td></tr></table>
 
 </li>
 </ol>
-<h3 id="single-command">Single Command</h3>
-<p>The <code>--runJob</code> command simply runs a job from a directory of files by uploading all the files in the directory. Usage is as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python clients/tango-rest.py -P &lt;port&gt; -k &lt;key&gt; -l &lt;courselab&gt; <span class="se">\</span>
-     --runJob &lt;clients/job1/&gt; --image &lt;image&gt;
-</pre></div>
-</td></tr></table>
-
-<h2 id="miscellaneous-commands">Miscellaneous Commands</h2>
-<p>The CLI also implements a list of commands to invoke the <a href="../tango-rest">Tango REST API</a>, including <code>--info</code>, <code>--prealloc</code>, and <code>--jobs</code>. For a full list of commands, run:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python clients/tango-rest.py --help
-</pre></div>
-</td></tr></table>
-
-<p>The general form for each command is as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python clients/tango-rest.py -P &lt;port&gt; -k &lt;key&gt; &lt;command&gt;
-</pre></div>
-</td></tr></table>
               
             </article>
           </div>
@@ -539,7 +623,7 @@ Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: He
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tango/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tango-vmms/" title="VMMS Docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -548,19 +632,19 @@ Autograder <span class="o">[</span>&lt;date-time&gt;<span class="o">]</span>: He
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                VMMS Docs
               </span>
             </div>
           </a>
         
         
-          <a href="../tango-rest/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../one-click/" title="OneClick Install" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                REST API
+                OneClick Install
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

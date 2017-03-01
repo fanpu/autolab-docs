@@ -21,7 +21,7 @@ For more information about the different Tango components, go to the following p
 * [REST API docs](/tango-rest)
 * [VMMS API docs](/tango-vmms)
 * [Tango Architecture Overview](http://autolab.github.io/2015/04/making-backend-scalable/)
-* [Deploying Tango](/tango-deploy) ()
+* [Deploying Tango](/tango-deploy)
 
 ### Installation
 

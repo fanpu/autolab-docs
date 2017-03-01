@@ -4,6 +4,7 @@ pages:
         - Getting Started: index.md
         - Guide for Instructors: instructors.md
         - Guide for Lab Authors: lab.md
+        - Features: features.md
     - Tango:
         - Getting Started: tango.md
         - Tango CLI: tango-cli.md 

@@ -253,6 +253,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#scoreboards" title="Scoreboards" class="md-nav__link">
+    Scoreboards
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-scoreboard" title="Default Scoreboard" class="md-nav__link">
+    Default Scoreboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-scoreboards" title="Custom Scoreboards" class="md-nav__link">
+    Custom Scoreboards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoreboard-entries" title="Scoreboard Entries" class="md-nav__link">
+    Scoreboard Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#embedded-forms" title="Embedded Forms" class="md-nav__link">
     Embedded Forms
   </a>
@@ -399,6 +433,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#scoreboards" title="Scoreboards" class="md-nav__link">
+    Scoreboards
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-scoreboard" title="Default Scoreboard" class="md-nav__link">
+    Default Scoreboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-scoreboards" title="Custom Scoreboards" class="md-nav__link">
+    Custom Scoreboards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoreboard-entries" title="Scoreboard Entries" class="md-nav__link">
+    Scoreboard Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#embedded-forms" title="Embedded Forms" class="md-nav__link">
     Embedded Forms
   </a>
@@ -442,8 +510,65 @@
 <p>This guide details the usage of features in Autolab.</p>
 <p>Features Documented (Work in Progress):</p>
 <ul>
+<li><a href="../features/#scoreboards">Scoreboards</a> </li>
 <li><a href="../features/#embedded-forms">Embedded Forms</a> </li>
 </ul>
+<h2 id="scoreboards">Scoreboards</h2>
+<p>Scoreboards are a central concept of Autolab and are created by the output of <a href="../lab/#writing-autograders">Autograders</a>. They anonomously rank students submitted assignments inspiring health competition and desire to improve. They are simple and highly customizable. Scoreboard's can be added/edited on the edit assessment screen (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>).</p>
+<p><img alt="Scoreboard Edit" src="../images/scoreboard_edit.png" /></p>
+<p>In general, scoreboards are configured using a JSON string.</p>
+<h3 id="default-scoreboard">Default Scoreboard</h3>
+<p>The default scoreboard displays the total problem scores, followed by each individual problem score, sorted in descending order by the total score.</p>
+<h3 id="custom-scoreboards">Custom Scoreboards</h3>
+<p>Autograded assignments have the option of creating custom scoreboards. You can specify your own custom scoreboard using a JSON column specification.</p>
+<p>The column spec consists of a "scoreboard" object, which is an array of JSON objects, where each object describes a column.</p>
+<p><strong>Example:</strong> a scoreboard with one column, called <code>Score</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
+        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">}</span> 
+    <span class="p">]</span> 
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>A custom scoreboard sorts the first three columns, from left to right, in descending order. You can change the default sort order for a particular column by adding an optional "asc:1" element to its hash.</p>
+<p><strong>Example:</strong> Scoreboard with two columns, "Score" and "Ops", with "Score" sorted descending, and then "Ops" ascending:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
+        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Ops&quot;</span><span class="p">,</span> <span class="nt">&quot;asc&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span> 
+    <span class="p">]</span> 
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="scoreboard-entries">Scoreboard Entries</h3>
+<p>The values for each row in a custom scoreboard come directly from a <code>scoreboard</code> array object in the autoresult string produced by the Tango, the autograder.</p>
+<p><strong>Example:</strong> Autoresult returning the score (97) for a single autograded problem called <code>autograded</code>, and a scoreboard entry with two columns: the autograded score (<code>Score</code>) and the number of operations (<code>Ops</code>):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;autograded&quot;</span><span class="p">:</span><span class="mi">97</span>
+    <span class="p">},</span> 
+    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span> 
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>For more information on how to use Autograders and Scoreboards together, visit the <a href="../lab">Guide for Lab Authors</a>.</p>
 <h2 id="embedded-forms">Embedded Forms</h2>
 <p>This feature allows an instructor to create an assessment which does not require a file submission on the part of the student. Instead, when an assessment is created, the hand-in page for that assessment will display an HTML form of the instructor’s design. When the student submits the form, the information is sent directly in JSON format to the Tango grading server for evaluation.</p>
 <div class="admonition attention">

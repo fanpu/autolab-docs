@@ -52,7 +52,7 @@ git clone https://github.com/autolab/autolab-oneclick.git; cd autolab-oneclick
 ### 3. Installation
 Run the following in the autolab-oneclick folder
 ```bash
-./install -l
+./install.sh -l
 ```
 This will take a few minutes. Once you see ``Autolab Installation Finished``, ensure all docker containers are running:
 
@@ -161,7 +161,7 @@ Autolab uses email for various features, include sending out user confirmation e
         
         ::bash
         cd autolab-oneclick
-        ./install -s
+        ./install.sh -s
    Answer the prompts and wait until you see ``Autolab Installation Finished``.
 
 2. Ensure docker containers are running

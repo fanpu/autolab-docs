@@ -39,7 +39,7 @@ This is a guide to setup a fully self-sufficient Tango deployment environment ou
         # tango_deployment    latest              3c0d4f4b4958        2 minutes ago       742.6 MB
         # ubuntu              15.04               d1b55fd07600        4 minutes ago       131.3 MB
 
-6. Run the following command to access the image in a container with a bash shell. The `-p` flag will map `nginxPort` on the docker container to `localPort` on your local machine (or on the VM that docker is running in on the local machine) so that Tango is accessible from outside the docker container. 
+6. Run the following command to access the image in a container with a bash shell. The `-p` flag will map `nginxPort` on the docker container to `localPort` (8610 recommended) on your local machine (or on the VM that docker is running in on the local machine) so that Tango is accessible from outside the docker container.
         
         :::sh
         $ docker run --privileged -p <localPort>:<nginxPort> -it tango_deployment /bin/bash

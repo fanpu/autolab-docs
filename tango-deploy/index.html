@@ -467,7 +467,7 @@
 
 </li>
 <li>
-<p>Run the following command to access the image in a container with a bash shell. The <code>-p</code> flag will map <code>nginxPort</code> on the docker container to <code>localPort</code> on your local machine (or on the VM that docker is running in on the local machine) so that Tango is accessible from outside the docker container. </p>
+<p>Run the following command to access the image in a container with a bash shell. The <code>-p</code> flag will map <code>nginxPort</code> on the docker container to <code>localPort</code> (8610 recommended) on your local machine (or on the VM that docker is running in on the local machine) so that Tango is accessible from outside the docker container.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker run --privileged -p &lt;localPort&gt;:&lt;nginxPort&gt; -it tango_deployment /bin/bash
 </pre></div>
 </td></tr></table>

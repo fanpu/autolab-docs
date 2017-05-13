@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -9,9 +9,9 @@
       
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -19,7 +19,13 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-4d0d3f2fbf.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+      
     
     
       
@@ -31,12 +37,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../assets/stylesheets/application-bc099a55ca.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -58,15 +58,15 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Autolab Docs" class=" md-logo  md-header-nav__button">
-          
+        
+          <a href=".." title="Autolab Docs" class="md-logo md-header-nav__button">
             <img src="../images/logo.svg" width="24" height="24">
-          
-        </a>
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -90,15 +90,21 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -106,9 +112,9 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
+        <div class="md-header-nav__source">
+          
             
-              
 
 
   
@@ -127,14 +133,16 @@
     </div>
   </a>
 
-            
-          </div>
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -142,13 +150,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
+    
+      <i class="md-logo md-nav__button">
         <img src="../images/logo.svg">
-      
-    </i>
+      </i>
+    
     Autolab Docs
   </label>
   
@@ -178,14 +186,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Autolab
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
         Autolab
       </label>
@@ -194,40 +207,48 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href=".." title="Getting Started" class="md-nav__link">
-        Getting Started
-      </a>
-    
+    <a href=".." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../instructors/" title="Guide for Instructors" class="md-nav__link">
-        Guide for Instructors
-      </a>
-    
+    <a href="../instructors/" title="Guide for Instructors" class="md-nav__link">
+      Guide for Instructors
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../lab/" title="Guide for Lab Authors" class="md-nav__link">
-        Guide for Lab Authors
-      </a>
-    
+    <a href="../lab/" title="Guide for Lab Authors" class="md-nav__link">
+      Guide for Lab Authors
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -313,6 +334,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -327,6 +350,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -334,7 +360,7 @@
     <label class="md-nav__link" for="nav-2">
       Tango
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         Tango
       </label>
@@ -343,56 +369,61 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../tango/" title="Getting Started" class="md-nav__link">
-        Getting Started
-      </a>
-    
+    <a href="../tango/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../tango-cli/" title="Tango CLI" class="md-nav__link">
-        Tango CLI
-      </a>
-    
+    <a href="../tango-cli/" title="Tango CLI" class="md-nav__link">
+      Tango CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../tango-rest/" title="REST API" class="md-nav__link">
-        REST API
-      </a>
-    
+    <a href="../tango-rest/" title="REST API" class="md-nav__link">
+      REST API
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../tango-vmms/" title="VMMS Docs" class="md-nav__link">
-        VMMS Docs
-      </a>
-    
+    <a href="../tango-vmms/" title="VMMS Docs" class="md-nav__link">
+      VMMS Docs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../tango-deploy/" title="Deploying Tango" class="md-nav__link">
-        Deploying Tango
-      </a>
-    
+    <a href="../tango-deploy/" title="Deploying Tango" class="md-nav__link">
+      Deploying Tango
+    </a>
   </li>
 
         
@@ -403,12 +434,13 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../one-click/" title="OneClick Install" class="md-nav__link">
-        OneClick Install
-      </a>
-    
+    <a href="../one-click/" title="OneClick Install" class="md-nav__link">
+      OneClick Install
+    </a>
   </li>
 
     
@@ -493,6 +525,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -503,8 +537,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="autolab-features-documentation">Autolab Features Documentation</h1>
 <p>This guide details the usage of features in Autolab.</p>
@@ -523,50 +557,33 @@
 <p>Autograded assignments have the option of creating custom scoreboards. You can specify your own custom scoreboard using a JSON column specification.</p>
 <p>The column spec consists of a "scoreboard" object, which is an array of JSON objects, where each object describes a column.</p>
 <p><strong>Example:</strong> a scoreboard with one column, called <code>Score</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">}</span> 
-    <span class="p">]</span> 
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-json linenums">{
+    &quot;scoreboard&quot;: [ 
+        {&quot;hdr&quot;:&quot;Score&quot;} 
+    ] 
+}</code></pre>
+
 
 <p>A custom scoreboard sorts the first three columns, from left to right, in descending order. You can change the default sort order for a particular column by adding an optional "asc:1" element to its hash.</p>
 <p><strong>Example:</strong> Scoreboard with two columns, "Score" and "Ops", with "Score" sorted descending, and then "Ops" ascending:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:</span> <span class="p">[</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Score&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="nt">&quot;hdr&quot;</span><span class="p">:</span><span class="s2">&quot;Ops&quot;</span><span class="p">,</span> <span class="nt">&quot;asc&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span> 
-    <span class="p">]</span> 
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-json linenums">{
+    &quot;scoreboard&quot;: [ 
+        {&quot;hdr&quot;:&quot;Score&quot;}, 
+        {&quot;hdr&quot;:&quot;Ops&quot;, &quot;asc&quot;:1} 
+    ] 
+}</code></pre>
+
 
 <h3 id="scoreboard-entries">Scoreboard Entries</h3>
 <p>The values for each row in a custom scoreboard come directly from a <code>scoreboard</code> array object in the autoresult string produced by the Tango, the autograder.</p>
 <p><strong>Example:</strong> Autoresult returning the score (97) for a single autograded problem called <code>autograded</code>, and a scoreboard entry with two columns: the autograded score (<code>Score</code>) and the number of operations (<code>Ops</code>):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;scores&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;autograded&quot;</span><span class="p">:</span><span class="mi">97</span>
-    <span class="p">},</span> 
-    <span class="nt">&quot;scoreboard&quot;</span><span class="p">:[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span> 
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-json linenums">{
+    &quot;scores&quot;: {
+        &quot;autograded&quot;:97
+    }, 
+    &quot;scoreboard&quot;:[97, 128] 
+}</code></pre>
+
 
 <p>For more information on how to use Autograders and Scoreboards together, visit the <a href="../lab">Guide for Lab Authors</a>.</p>
 <h2 id="embedded-forms">Embedded Forms</h2>
@@ -585,114 +602,77 @@
 </ul>
 <p>HTML Form Reference:</p>
 <p><strong>Text Field (For short responses)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">“text”</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-1”/</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-html linenums">&lt;input type=“text” name=“question-1”/&gt;</code></pre>
+
 
 <p><strong>Text Area (For coding questions)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-2”</span> <span class="na">style</span><span class="o">=</span><span class="s">“width:100%”/</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-html linenums">&lt;textarea name=“question-2” style=“width:100%”/&gt;</code></pre>
+
 
 <p><strong>Radio Button (For multiple choice)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">“row</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-3”</span> <span class="na">type</span><span class="o">=</span><span class="s">“radio”</span> <span class="na">value</span><span class="o">=</span><span class="s">“object”</span> <span class="na">id</span><span class="o">=</span><span class="s">“q3-1”/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Object<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">“question-3”</span> <span class="na">type</span><span class="o">=</span><span class="s">“radio”</span> <span class="na">value</span><span class="o">=</span><span class="s">“boolean”</span> <span class="na">id</span><span class="o">=</span><span class="s">“q3-2”/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">“q3-2”</span><span class="p">&gt;</span>Boolean<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-html linenums">&lt;div class = “row&gt;
+    &lt;input name=“question-3” type=“radio” value=“object” id=“q3-1”/&gt;
+    &lt;label for=&quot;q3-1&quot;&gt;Object&lt;/label&gt;
+    &lt;input name=“question-3” type=“radio” value=“boolean” id=“q3-2”/&gt;
+    &lt;label for=“q3-2”&gt;Boolean&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
 
 <p><strong>Dropdown (For multiple choice or select all that apply)</strong> </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">select</span> <span class="na">multiple</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-4&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>Option 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Option 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>Option 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-html linenums">&lt;select multiple name=&quot;question-4&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
 
 <p><strong>Example Form (shown in screenshot above)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q1&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;What&#39;s your name?&quot;</span> <span class="p">/&gt;</span>
+<pre class="codehilite"><code class="language-html linenums">&lt;input type=&quot;text&quot; name=&quot;question-1&quot; id=&quot;q1&quot; placeholder=&quot;What's your name?&quot; /&gt;
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;freshman&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-1&quot;</span><span class="p">&gt;</span>Freshman<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+&lt;div class = &quot;row&quot;&gt;
+    &lt;input name=&quot;question-2&quot; type=&quot;radio&quot; value=&quot;freshman&quot; id=&quot;q3-1&quot;/&gt;
+    &lt;label for=&quot;q3-1&quot;&gt;Freshman&lt;/label&gt;
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;sophomore&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span><span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-2&quot;</span><span class="p">&gt;</span>Sophomore<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    &lt;input name=&quot;question-2&quot; type=&quot;radio&quot; value=&quot;sophomore&quot; id=&quot;q3-2&quot;/&gt;
+    &lt;label for=&quot;q3-2&quot;&gt;Sophomore&lt;/label&gt;
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;junior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span><span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-3&quot;</span><span class="p">&gt;</span>Junior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    &lt;input name=&quot;question-2&quot; type=&quot;radio&quot; value=&quot;junior&quot; id=&quot;q3-3&quot;/&gt;
+    &lt;label for=&quot;q3-3&quot;&gt;Junior&lt;/label&gt;
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;senior&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span><span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q3-4&quot;</span><span class="p">&gt;</span>Senior<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>What&#39;s your favorite language?<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;question-3&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;q4&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;C&quot;</span><span class="p">&gt;</span>C<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Python&quot;</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Java&quot;</span><span class="p">&gt;</span>Java<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+    &lt;input name=&quot;question-2&quot; type=&quot;radio&quot; value=&quot;senior&quot; id=&quot;q3-4&quot;/&gt;
+    &lt;label for=&quot;q3-4&quot;&gt;Senior&lt;/label&gt;
+&lt;/div&gt;
+&lt;label for=&quot;q4&quot;&gt;What's your favorite language?&lt;/label&gt;
+&lt;select name=&quot;question-3&quot; id=&quot;q4&quot;&gt;
+    &lt;option value=&quot;C&quot;&gt;C&lt;/option&gt;
+    &lt;option value=&quot;Python&quot;&gt;Python&lt;/option&gt;
+    &lt;option value=&quot;Java&quot;&gt;Java&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
 
 <p>Navigate to the Basic section of editing an assessment (<code>/courses/&lt;course&gt;/assessments/&lt;assessment&gt;/edit</code>), check the check box, and upload the HTML file. Ensure you submit the form by clicking <code>Save</code> at the bottom of the page.</p>
 <p><img alt="Embedded Form Edit" src="../images/embedded_quiz_edit.png" /></p>
 <h3 id="grading-an-embedded-form">Grading an Embedded Form</h3>
 <p>When a student submits a form, the form data is sent to <a href="../tango">Tango</a> in the form of a JSON string in the file <code>out.txt.</code> In your grading script, parse the contents of <code>out.txt</code> as a JSON object. The JSON object will be a key-value pair data structure, so you can access the students response string (<code>value</code>) by its unique key (the <code>name</code> attribute).</p>
 <p>For the example form shown above, the JSON object will be as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;utf8&quot;</span><span class="p">:</span><span class="s2">&quot;✓&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;authenticity_token&quot;</span><span class="p">:</span><span class="s2">&quot;LONGAUTHTOKEN&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;submission[embedded_quiz_form_answer]&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-1&quot;</span><span class="p">:</span><span class="s2">&quot;John Smith&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-2&quot;</span><span class="p">:</span><span class="s2">&quot;junior&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;question-3&quot;</span><span class="p">:</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;integrity_checkbox&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-json linenums">{
+    &quot;utf8&quot;:&quot;✓&quot;,
+    &quot;authenticity_token&quot;:&quot;LONGAUTHTOKEN&quot;,
+    &quot;submission[embedded_quiz_form_answer]&quot;:&quot;&quot;,
+    &quot;question-1&quot;:&quot;John Smith&quot;,
+    &quot;question-2&quot;:&quot;junior&quot;,
+    &quot;question-3&quot;:&quot;Python&quot;,
+    &quot;integrity_checkbox&quot;:&quot;1&quot;
+}</code></pre>
+
 
 <p>Use this information to do any processing you need in Tango.If you find any problems, please file an issue on the <a href="https://github.com/autolab/Autolab">Autolab Github</a>.</p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -766,8 +746,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-7f35cda7dd.js"></script>
-      <script>var config={url:{base:".."}},app=new Application(config);app.initialize()</script>
+      <script src="../assets/javascripts/application-6b599127bc.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
       
     
     

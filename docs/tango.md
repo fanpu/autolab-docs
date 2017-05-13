@@ -60,7 +60,12 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
         $ pip install -r requirements.txt
         $ mkdir volumes
 
-7. Run the following command to start the server (producer). If no port is given, the server will run on the port specified in `config.py` (default: 3000):
+7. Start Redis by running the following command:
+
+        :::bash
+        $ redis-server
+
+8. Run the following command to start the server (producer). If no port is given, the server will run on the port specified in `config.py` (default: 3000):
         
         :::bash
         python restful-tango/server.py <port>
@@ -70,15 +75,15 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
         python jobManager.py
     For more information on the job producer/consumer model check out our [blog post](http://autolab.github.io/2015/04/making-backend-scalable/)
 
-8. Ensure Tango is running:
+9. Ensure Tango is running:
     
         :::bash
         $ curl localhost:<port>
         # Hello, world! RESTful Tango here!
 
-9. You can test the Tango setup using the [command line client](/tango-cli).
+10. You can test the Tango setup using the [command line client](/tango-cli).
 
-10. If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:
+11. If you are using Tango with Autolab, you have to configure Autolab to use Tango. Go to your Autolab directory and enter the following commands:
 
         :::bash
         cp config/autogradeConfig.rb.template config/autogradeConfig.rb
@@ -95,5 +100,5 @@ This guide shows how to setup Tango in a **development environment**. Use the [d
         # Key for Tango RESTful API
         RESTFUL_KEY = "test"
 
-11. To deploy Tango in a standalone production environment, use this [guide](/tango-deploy)
+12. To deploy Tango in a standalone production environment, use this [guide](/tango-deploy)
 

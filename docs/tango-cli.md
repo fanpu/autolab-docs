@@ -10,6 +10,16 @@ The Tango directory contains various different jobs in the `clients/` directory;
 
 Find out more information about the Tango REST API [here](/tango-rest).
 
+### Single Command
+
+The `--runJob` command simply runs a job from a directory of files by uploading all the files in the directory. You can use this to submit an autograding job by running
+
+```bash
+$ python clients/tango-cli.py -P 3000 -k test -l assessment1 --runJob clients/job1/ --image autograding_image
+```
+
+The args are -P \<port\>, -k \<key\>, -l \<assessment_name\> --runJob \<job_files_path\> --image \<autograde_image\>
+
 ### Individual Steps
 
 1. Open a `courselab` on Tango. This will create a directory for tango to store the files for the job. 
@@ -49,16 +59,6 @@ Find out more information about the Tango REST API [here](/tango-rest).
         Autograder [<date-time>]: Here is the output from the autograder:
         ---
         ...
-    
-
-### Single Command
-
-The `--runJob` command simply runs a job from a directory of files by uploading all the files in the directory. Usage is as follows:
-
-```bash
-$ python clients/tango-rest.py -P <port> -k <key> -l <courselab> \
-     --runJob <clients/job1/> --image <image>
-```
 
 ## Miscellaneous Commands
 

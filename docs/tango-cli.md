@@ -18,7 +18,7 @@ The `--runJob` command simply runs a job from a directory of files by uploading 
 $ python clients/tango-cli.py -P 3000 -k test -l assessment1 --runJob clients/job1/ --image autograding_image
 ```
 
-The args are -P \<port\>, -k \<key\>, -l \<assessment_name\> --runJob \<job_files_path\> --image \<autograde_image\>
+The args are -P \<port\>, -k \<key\>, -l \<job_name\> --runJob \<job_files_path\> --image \<autograde_image\>
 
 ### Individual Steps
 

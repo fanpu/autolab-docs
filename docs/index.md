@@ -83,18 +83,18 @@ Follow the step-by-step instructions below:
         cp config/database.yml.template config/database.yml
    Edit `database.yml` with the correct credentials for your chosen database. Refer to the [FAQ](#faq) for any issues.
 
-9. Configure the Devise Auth System with a unique key (run these commands exactly):
-
-        :::bash
-        cp config/nitializers/devise.rb.template config/initializers/devise.rb
-        sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" initializers/devise.rb
-   Fill in `<YOUR_WEBSITE>` in `config/initializers/devise.rb` file. To skip this step for now, fill with `foo.bar`.
-
-10. Configure school/organization specific information (new feature):
+9. Configure school/organization specific information (new feature):
         
         :::bash
         cp config/school.yml.template config/school.yml
     Edit `school.yml` with your school/organization specific names and emails
+    
+10. Configure the Devise Auth System with a unique key (run these commands exactly):
+
+        :::bash
+        cp config/initializers/devise.rb.template config/initializers/devise.rb
+        sed -i "s/<YOUR-SECRET-KEY>/`bundle exec rake secret`/g" initializers/devise.rb
+   Fill in `<YOUR_WEBSITE>` in `config/initializers/devise.rb` file. To skip this step for now, fill with `foo.bar`.
 
 11. Create and initialize the database tables:
 

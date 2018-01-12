@@ -648,7 +648,7 @@ bundle install</code></pre>
 </li>
 <li>
 <p>Configure the Devise Auth System with a unique key (run these commands exactly):</p>
-<pre class="codehilite"><code class="language-bash linenums">cp config/nitializers/devise.rb.template config/initializers/devise.rb
+<pre class="codehilite"><code class="language-bash linenums">cp config/initializers/devise.rb.template config/initializers/devise.rb
 sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initializers/devise.rb</code></pre>
 
 

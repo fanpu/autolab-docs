@@ -700,18 +700,20 @@ please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117
 <p>If you get the following error</p>
 <pre class="codehilite"><code class="language-bash linenums">Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release  
 Unable to find expected entry 'main/binary-i386/Packages' in Release file (Wrong sources.list entry or malformed file)</code></pre>
-
-
 <p>then follow the solution in <a href="http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome">this post</a>. </p>
+
+<h4 id="no-implicit-conversion-of-pathname-to-string">No Implicit Conversion of Pathname to String</h4>
+<p>If you try to navigate to a course and get a 'No implicit conversion of pathname to string' error that mentions 'autogradeConfig.rb', you need to duplicate a template file. This is part of the Tango setup.</p>
+<p>Run this command from your Autolab directory</p>
+<pre class="codehilite"><code class="language-bash linenums">cp config/autogradeConfig.rb.template config/autogradeConfig.rb</code></pre>
+
 <h4 id="where-do-i-find-the-mysql-username-and-password">Where do I find the MySQL username and password?</h4>
 <p>If this is your first time logging into MySQL, your username is 'root'. You may also need to set the root password:</p>
 <p>Start the server:</p>
 <pre class="codehilite"><code class="language-bash linenums">sudo /usr/local/mysql/support-files/mysql.server start</code></pre>
 
-
 <p>Set the password:</p>
 <pre class="codehilite"><code class="language-bash linenums">mysqladmin -u root password &quot;[New_Password]&quot;</code></pre>
-
 
 <p>If you lost your root password, refer to the <a href="http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html">MySQL wiki</a></p>
 <h4 id="bundle-install-errors">Bundle Install Errors</h4>

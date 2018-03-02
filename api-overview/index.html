@@ -15,7 +15,7 @@
     
     
       
-        <title>VMMS Docs - Autolab Docs</title>
+        <title>Overview - Autolab Docs</title>
       
     
     
@@ -77,11 +77,15 @@
             
               
                 <span class="md-header-nav__parent">
-                  Tango
+                  Autolab
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  API (Beta Feature)
                 </span>
               
             
-            VMMS Docs
+            Overview
           
         </span>
       </div>
@@ -188,10 +192,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Autolab
@@ -255,10 +261,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
     
     <label class="md-nav__link" for="nav-1-5">
       API (Beta Feature)
@@ -274,11 +282,103 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../api-overview/" title="Overview" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Overview
+      </label>
+    
+    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorization" title="Authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization-code-grant-flow" title="Authorization Code Grant Flow" class="md-nav__link">
+    Authorization Code Grant Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-flow" title="Device Flow" class="md-nav__link">
+    Device Flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-user-code" title="Obtaining User Code" class="md-nav__link">
+    Obtaining User Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-authorization-code" title="Obtaining Authorization Code" class="md-nav__link">
+    Obtaining Authorization Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scopes" title="Scopes" class="md-nav__link">
+    Scopes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -308,12 +408,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Tango
@@ -365,119 +463,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        VMMS Docs
-      </label>
-    
-    <a href="./" title="VMMS Docs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tango-vmms/" title="VMMS Docs" class="md-nav__link">
       VMMS Docs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initializevm" title="initializeVM" class="md-nav__link">
-    initializeVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#waitvm" title="waitVM" class="md-nav__link">
-    waitVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyin" title="copyIn" class="md-nav__link">
-    copyIn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runjob" title="runJob" class="md-nav__link">
-    runJob
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyout" title="copyOut" class="md-nav__link">
-    copyOut
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
-    destroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
-    safeDestroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getvms" title="getVMs" class="md-nav__link">
-    getVMs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
-    Docker VMMS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-ec2-vmms-setup" title="Amazon EC2 VMMS Setup" class="md-nav__link">
-    Amazon EC2 VMMS Setup
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -529,66 +519,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
+  <a href="#authorization" title="Authorization" class="md-nav__link">
+    Authorization
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#initializevm" title="initializeVM" class="md-nav__link">
-    initializeVM
+  <a href="#authorization-code-grant-flow" title="Authorization Code Grant Flow" class="md-nav__link">
+    Authorization Code Grant Flow
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#waitvm" title="waitVM" class="md-nav__link">
-    waitVM
+  <a href="#device-flow" title="Device Flow" class="md-nav__link">
+    Device Flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-user-code" title="Obtaining User Code" class="md-nav__link">
+    Obtaining User Code
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#copyin" title="copyIn" class="md-nav__link">
-    copyIn
+  <a href="#obtaining-authorization-code" title="Obtaining Authorization Code" class="md-nav__link">
+    Obtaining Authorization Code
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#runjob" title="runJob" class="md-nav__link">
-    runJob
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyout" title="copyOut" class="md-nav__link">
-    copyOut
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
-    destroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
-    safeDestroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getvms" title="getVMs" class="md-nav__link">
-    getVMs
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -598,16 +566,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
-    Docker VMMS Setup
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scopes" title="Scopes" class="md-nav__link">
+    Scopes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-ec2-vmms-setup" title="Amazon EC2 VMMS Setup" class="md-nav__link">
-    Amazon EC2 VMMS Setup
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -626,152 +600,94 @@
               
                 
                 
-                  <h1>VMMS Docs</h1>
+                  <h1>Overview</h1>
                 
-                <p>This page documents the interface for Tango's Virtual Machine Management Systems' (VMMSs) API and instructions for setting up VMMSs. See <a href="https://github.com/autolab/Tango/tree/master/vmms">the vmms directory</a> in Tango for example implementations. </p>
-<h2 id="api">API</h2>
-<p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run. </p>
-<h3 id="initializevm">initializeVM</h3>
-<pre class="codehilite"><code class="language-python linenums">initializeVM(self, vm)</code></pre>
-
-
-<p>Creates a new VM instance for the VMMS based on the fields of <code>vm</code>, which is a <code>TangoMachine</code> object defined in <code>tangoObjects.py</code>.</p>
-<h3 id="waitvm">waitVM</h3>
-<pre class="codehilite"><code class="language-python linenums">waitVM(self, vm, max_secs)</code></pre>
-
-
-<p>Waits at most <code>max_secs</code> for a VM to be ready to run jobs. Returns an error if the VM is not ready after <code>max_secs</code>.</p>
-<h3 id="copyin">copyIn</h3>
-<pre class="codehilite"><code class="language-python linenums">copyIn(self, vm, inputFiles)</code></pre>
-
-
-<p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM. </p>
-<h3 id="runjob">runJob</h3>
-<pre class="codehilite"><code class="language-python linenums">runJob(self, vm, runTimeout, maxOutputFileSize)</code></pre>
-
-
-<p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API. </p>
-<h3 id="copyout">copyOut</h3>
-<pre class="codehilite"><code class="language-python linenums">copyOut(self, vm, destFile)</code></pre>
-
-
-<p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine. </p>
-<h3 id="destroyvm">destroyVM</h3>
-<pre class="codehilite"><code class="language-python linenums">destroyVM(self, vm)</code></pre>
-
-
-<p>Removes a VM from the Tango system. </p>
-<h3 id="safedestroyvm">safeDestroyVM</h3>
-<pre class="codehilite"><code class="language-python linenums">safeDestroyVM(self, vm)</code></pre>
-
-
-<p>Removes a VM from the Tango system and makes sure that it has been removed. </p>
-<h3 id="getvms">getVMs</h3>
-<pre class="codehilite"><code class="language-python linenums">getVMs(self)</code></pre>
-
-
-<p>Returns a complete list of VMs associated with this Tango system. </p>
-<h2 id="docker-vmms-setup">Docker VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs inside Docker containers. </p>
+                <p>The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.</p>
+<p>V1 of the API allows clients to:</p>
+<ul>
+<li>Access basic user info</li>
+<li>View courses and assessments</li>
+<li>Submit to assessments</li>
+<li>View scores and feedback</li>
+<li>Manage course enrollments</li>
+</ul>
+<h2 id="authorization">Authorization</h2>
+<p>All endpoints of the Autolab API requires client authentication in the form of an access token. To obtain this access token, clients must obtain authorization from the user.</p>
+<p>Autolab API uses the standard <a href="https://tools.ietf.org/html/rfc6749">OAuth2</a> <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization Code Grant</a> for user authorization. For clients with no easy access to web browsers (e.g. console apps), an alternative <a href="https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07">device flow</a>-based authorization method is provided as well.</p>
+<h3 id="authorization-code-grant-flow">Authorization Code Grant Flow</h3>
+<p>The authorization code grant consists of 5 basic steps:</p>
 <ol>
-<li>
-<p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
-<pre class="codehilite"><code class="language-bash linenums">$ docker ps
-# CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</code></pre>
-
-
-</li>
-<li>
-<p>Build base Docker image from root Tango directory.</p>
-<pre class="codehilite"><code class="language-sh linenums">cd path/to/Tango
-docker build -t autograding_image vmms/
-docker images autograding_image    # Check if image built</code></pre>
-
-
-</li>
-<li>
-<p>Update <code>VMMS_NAME</code> in <code>config.py</code>.</p>
-<pre class="codehilite"><code class="language-python linenums"># in config.py
-VMMS_NAME = &quot;localDocker&quot;</code></pre>
-
-
-</li>
+<li>Client directs the user to the authorization request endpoint via a web browser.</li>
+<li>Authorization server (Autolab) authenticates the user.</li>
+<li>If user grants access to the client, the authorization server provides an "authorization code" to the client.</li>
+<li>Client exchanges the authorization code for an access token from the access token endpoint.</li>
+<li>Client uses the access token for subsequent requests to the API.</li>
 </ol>
-<h2 id="amazon-ec2-vmms-setup">Amazon EC2 VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs on an Amazon EC2 VM. </p>
-<ol>
-<li>
-<p>Create an <a href="https://aws.amazon.com/">AWS Account</a> or use an existing one.</p>
-</li>
-<li>
-<p>Obtain your <code>access_key_id</code> and <code>secret_access_key</code> by following the instructions <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">here</a>.</p>
-</li>
-<li>
-<p>Add AWS Credentials to a file called <code>~/.boto</code> using the following format:</p>
-<pre class="codehilite"><code class="language-bash linenums">[Credentials]
-aws_access_key_id = MYAMAZONTESTKEY12345
-aws_secret_access_key = myawssecretaccesskey12345</code></pre>
-
-
-<p>Tango uses the <a href="http://boto.cloudhackers.com/en/latest/">Boto</a> Python package to interface with Amazon Web Services</p>
-</li>
-<li>
-<p>In the AWS EC2 console, create an Ubuntu 14.04+ EC2 instance and save the <code>.pem</code> file in a safe location. </p>
-</li>
-<li>
-<p>Copy the directory and contents of <code>autodriver/</code> in the Tango repo into the EC2 VM. For more help connecting to the EC2 instance follow <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html#AccessingInstancesLinuxSCP">this guide</a></p>
-<pre class="codehilite"><code class="language-bash linenums">chmod 400 /path/my-key-pair.pem
-scp -i /path/my-key-pair.pem -r autodriver/ ubuntu@&lt;ec2-host-name&gt;.compute-1.amazonaws.com:~/</code></pre>
-
-
-<p>The autodriver is used as a sandbox environment to run the job inside the VM. It limits Disk I/O, Disk Usage, monitors security, and controls other valuable <code>sudo</code> level resources.</p>
-</li>
-<li>
-<p>In the EC2 VM, compile the autodriver.</p>
-<pre class="codehilite"><code class="language-bash linenums">$ cd autodriver/
-$ make clean; make
-$ cp -p autodriver /usr/bin/autodriver</code></pre>
-
-
-</li>
-<li>
-<p>Create the <code>autograde</code> Linux user and directory. All jobs will be run under this user.</p>
-<pre class="codehilite"><code class="language-bash linenums">$ useradd autograde
-$ mkdir autograde
-$ chown autograde autograde
-$ chown :autograde autograde</code></pre>
-
-
-</li>
-<li>
-<p>In the AWS EC2 console, create an AMI image from your EC2 VM. Use <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#how-to-create-ebs-ami">this guide</a> to create a custom AMI.</p>
-</li>
-<li>
-<p>Exit the EC2 instance and edit the following values in <code>config.py</code> in the Tango directory.</p>
-<pre class="codehilite"><code class="language-bash linenums"># VMMS to use. Must be set to a VMMS implemented in vmms/ before
-# starting Tango.  Options are: &quot;localDocker&quot;, &quot;distDocker&quot;,
-# &quot;tashiSSH&quot;, and &quot;ec2SSH&quot;
-VMMS_NAME = &quot;ec2SSH&quot;
-######
-# Part 5: EC2 Constants
-#
-EC2_REGION = 'us-east-1'             # EC2 Region
-EC2_USER_NAME = 'ubuntu'             # EC2 username
-DEFAULT_AMI = 'ami-4c99c35b'         # Custom AMI Id 
-DEFAULT_INST_TYPE = 't2.micro'       # Instance Type
-DEFAULT_SECURITY_GROUP = 'autolab-autograde-ec2'  # Security Group with full access to EC2
-SECURITY_KEY_PATH = '/path/to/my-key-pair.pem'    # Absolute path to my-key-pair.pem
-DYNAMIC_SECURITY_KEY_PATH = ''       # Leave blank
-SECURITY_KEY_NAME = 'my-key-pair'    # Name of the key file. Ex: if file name is 'my-key-pair.pem', fill value with 'my-key-pair'
-TANGO_RESERVATION_ID = '1'           # Leave as 1
-INSTANCE_RUNNING = 16                # Status code of a running instance, leave as 16</code></pre>
-
-
-</li>
-<li>
-<p>You should now be ready to run Tango jobs on EC2! Use the <a href="../tango-cli">Tango CLI</a> to test your setup.</p>
-</li>
-</ol>
+<p>The endpoint for obtaining user authorization is
+<code>/oauth/authorize</code></p>
+<p>The endpoint for obtaning access tokens and refresh tokens is
+<code>oauth/token</code></p>
+<p><a href="https://tools.ietf.org/html/rfc6749#section-4.1">Section 4.1 of RFC 6749</a> details the parameters required and the response clients can expect from these endpoints.</p>
+<p>Autolab API provides a refresh token with every new access token. Once the access token has expired, the client can use the refresh token to obtain a new access token, refresh token pair. Details are also provided in RFC 6749 <a href="https://tools.ietf.org/html/rfc6749#section-6">here</a>.</p>
+<h3 id="device-flow">Device Flow</h3>
+<p>For devices that cannot use a web browser to obtain user authorization, the alternative device flow approach circumvents the first 3 steps in the authorization code grant flow. Instead of directing a user to the authorization page directly, the client obtains a user code that the user can enter on the Autolab website from any device. The website then takes the user through the authorization procedure, and returns the authorization code to the client. The client can then use this code to request an access token from the access token endpoint as usual.</p>
+<p>Note that this is different from the "device flow" described in the Internet Draft linked above.</p>
+<h4 id="obtaining-user-code">Obtaining User Code</h4>
+<p>Request Endpoint: <code>GET /device_flow_init</code></p>
+<p>Parameters:</p>
+<ul>
+<li>client_id: the client_id obtained when registering the client</li>
+</ul>
+<p>Success Response:</p>
+<ul>
+<li>device_code: the verification code used by the client (should be kept secret from the user).</li>
+<li>user_code: the verification code that should be displayed to the user.</li>
+<li>verification_uri: the verification uri that the user should use to authorize the client. By default is <code>/activate</code></li>
+</ul>
+<p>The latter two should be displayed to the user.</p>
+<h4 id="obtaining-authorization-code">Obtaining Authorization Code</h4>
+<p>After asking the user to enter the user code on the verification site, the client should poll the device_flow_authorize endpoint to find out if the user has completed the authorization step.</p>
+<p>Request Endpoint: <code>GET /device_flow_authorize</code></p>
+<p>Parameters:</p>
+<ul>
+<li>client_id: the client_id obtained when registering the client</li>
+<li>device_code: the device_code obtained from the device_flow_init endpoint</li>
+</ul>
+<p>Failure Responses:</p>
+<ul>
+<li>400 Bad Request: {error: authorization_pending}<br>
+  The user has not yet granted or denied the authorization request. Please try again in a while.</li>
+<li>429 Too Many Requests: {error: Retry later}<br>
+  The client is polling too frequently. Please wait for a while before polling again.<br>
+  The default rate limit is once every 5 seconds.</li>
+</ul>
+<p>Success Response:</p>
+<ul>
+<li>code: the authorization code that should be used to obtain an access token.</li>
+</ul>
+<p>The client could then perform steps 4 and 5 of the Authorization Code Grant Flow.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Autolab requires all client applications to be registered clients. Upon registration, a client_id and client_secret pair will be provided to the developers for use in the app as identification to the server. Please contact the administrators of your specific Autolab deployment for registration.</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Concerns</p>
+<p>Please make sure to keep the client_secret secret. Leaking this code may allow third-parties to impersonate your app.</p>
+</div>
+<h3 id="scopes">Scopes</h3>
+<p>The scopes of an API client specifies the permissions it has, and must be specified during client registration (can be modified later). Currently, Autolab offers the following scopes for third-party clients:</p>
+<ul>
+<li>user_info: Access your basic info (e.g. name, email, school, year).</li>
+<li>user_courses: Access your courses and assessments.</li>
+<li>user_scores: Access your submissions, scores, and feedback.</li>
+<li>user_submit: Submit to assessments on your behalf.</li>
+<li>instructor_all: Access admin options of courses where you are an instructor.</li>
+</ul>
+<p><strong>Example usages</strong></p>
+<ul>
+<li>If your app only wants to use the API for quick user authentication, you only need the 'user_info' scope.</li>
+<li>If you want to develop a mobile client for Autolab that allows students to view their upcoming assessments, you may ask for 'user_info' and 'user_courses'.</li>
+<li>If you want to write a full desktop client that users can use to submit to assessments and view their grades, you may ask for all 5 scopes.</li>
+</ul>
+<p>Of course, these are only examples. We can't wait to see what new usages of the API you may come up with! We just recommend that you only ask for the scopes you need as the users will be shown the required scopes during authorization, and it gives them peace of mind to know that an app doesn't ask for excessive permissions.</p>
                 
                   
                 
@@ -790,7 +706,7 @@ INSTANCE_RUNNING = 16                # Status code of a running instance, leave 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tango-rest/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../features/" title="Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -799,19 +715,19 @@ INSTANCE_RUNNING = 16                # Status code of a running instance, leave 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                REST API
+                Features
               </span>
             </div>
           </a>
         
         
-          <a href="../tango-deploy/" title="Deploying Tango" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../api-interface/" title="Reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deploying Tango
+                Reference
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

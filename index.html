@@ -357,6 +357,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+    
+    <label class="md-nav__link" for="nav-1-5">
+      API (Beta Feature)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        API (Beta Feature)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="api-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="api-interface/" title="Reference" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -647,19 +695,19 @@ bundle install</code></pre>
 <p>Edit <code>database.yml</code> with the correct credentials for your chosen database. Refer to the <a href="#faq">FAQ</a> for any issues.</p>
 </li>
 <li>
+<p>Configure school/organization specific information (new feature):</p>
+<pre class="codehilite"><code class="language-bash linenums">cp config/school.yml.template config/school.yml</code></pre>
+
+
+<p>Edit <code>school.yml</code> with your school/organization specific names and emails</p>
+</li>
+<li>
 <p>Configure the Devise Auth System with a unique key (run these commands exactly):</p>
 <pre class="codehilite"><code class="language-bash linenums">cp config/initializers/devise.rb.template config/initializers/devise.rb
 sed -i &quot;s/&lt;YOUR-SECRET-KEY&gt;/`bundle exec rake secret`/g&quot; initializers/devise.rb</code></pre>
 
 
 <p>Fill in <code>&lt;YOUR_WEBSITE&gt;</code> in <code>config/initializers/devise.rb</code> file. To skip this step for now, fill with <code>foo.bar</code>.</p>
-</li>
-<li>
-<p>Configure school/organization specific information (new feature):</p>
-<pre class="codehilite"><code class="language-bash linenums">cp config/school.yml.template config/school.yml</code></pre>
-
-
-<p>Edit <code>school.yml</code> with your school/organization specific names and emails</p>
 </li>
 <li>
 <p>Create and initialize the database tables:</p>
@@ -700,20 +748,18 @@ please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#117
 <p>If you get the following error</p>
 <pre class="codehilite"><code class="language-bash linenums">Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release  
 Unable to find expected entry 'main/binary-i386/Packages' in Release file (Wrong sources.list entry or malformed file)</code></pre>
+
+
 <p>then follow the solution in <a href="http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome">this post</a>. </p>
-
-<h4 id="no-implicit-conversion-of-pathname-to-string">No Implicit Conversion of Pathname to String</h4>
-<p>If you try to navigate to a course and get a 'No implicit conversion of pathname to string' error that mentions 'autogradeConfig.rb', you need to duplicate a template file. This is part of the Tango setup.</p>
-<p>Run this command from your Autolab directory</p>
-<pre class="codehilite"><code class="language-bash linenums">cp config/autogradeConfig.rb.template config/autogradeConfig.rb</code></pre>
-
 <h4 id="where-do-i-find-the-mysql-username-and-password">Where do I find the MySQL username and password?</h4>
 <p>If this is your first time logging into MySQL, your username is 'root'. You may also need to set the root password:</p>
 <p>Start the server:</p>
 <pre class="codehilite"><code class="language-bash linenums">sudo /usr/local/mysql/support-files/mysql.server start</code></pre>
 
+
 <p>Set the password:</p>
 <pre class="codehilite"><code class="language-bash linenums">mysqladmin -u root password &quot;[New_Password]&quot;</code></pre>
+
 
 <p>If you lost your root password, refer to the <a href="http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html">MySQL wiki</a></p>
 <h4 id="bundle-install-errors">Bundle Install Errors</h4>

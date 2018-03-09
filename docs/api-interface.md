@@ -338,6 +338,7 @@ The user's email is used to uniquely identify the user on Autolab. If the user i
 | grade_policy | | string | The user's grade policy (opaque to Autolab). |
 | dropped | | boolean | Should the user be marked as dropped? |
 | nickname | | string | The nickname to give the user. |
+| auth_level | required | string | The level of access this user has for this course. One of 'student', 'course_assistant', or 'instructor'. |
 
 **Response:**
 
@@ -360,6 +361,7 @@ Update an existing course_user_data.
 | grade_policy | | string | The user's grade policy (opaque to Autolab). |
 | dropped | | boolean | Should the user be marked as dropped? |
 | nickname | | string | The nickname to give the user. |
+| auth_level | | string | The level of access this user has for this course. One of 'student', 'course_assistant', or 'instructor'. |
 
 **Response:**
 

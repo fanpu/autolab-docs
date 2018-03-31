@@ -39,9 +39,15 @@ Follow the step-by-step instructions below:
 		:::bash
         git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
    Restart your shell at this point in order to start using your newly installed rbenv
+   
+3. Clone the Autolab repo into home directory and enter it:
+        
+        :::bash
+        cd
+        git clone https://github.com/autolab/Autolab.git && cd Autolab
         
 
-3. Install the correct version of ruby:
+4. Install the correct version of ruby:
         
         :::bash
         rbenv install $(cat .ruby-version)
@@ -54,16 +60,11 @@ Follow the step-by-step instructions below:
         $ which rake
         ~/.rbenv/shims/rake
 
-4. Install `bundler`:
+5. Install `bundler`:
         
         :::bash
         gem install bundler
         rbenv rehash
-
-5. Clone the Autolab repo into any desired directory:
-        
-        :::bash
-        git clone https://github.com/autolab/Autolab.git
 
 6. Install the required gems (run the following commands in the cloned Autolab repo):
 

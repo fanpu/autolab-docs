@@ -7,11 +7,11 @@ There are two types of installations. A local development setup and a real-world
 ## Local OneClick Setup
 
 ### 1. Prepare an Ubuntu VM
-These installation instructions are for Ubuntu. If you're on other operating system, we recommend you set up an Ubuntu virtual machine first with [Virtual Box](http://www.ubuntu.com/download/alternative-downloads).
+These installation instructions are for Ubuntu. If you're on other operating system, we recommend you set up an Ubuntu virtual machine first with [Virtual Box](https://www.virtualbox.org/wiki/Downloads).
 
 About the System Configuration:
 
-* [Ubuntu 14.04( or higher) 64bit](https://www.virtualbox.org/wiki/Downloads)
+* [Ubuntu 14.04( or higher) 64bit](http://www.ubuntu.com/download/alternative-downloads)
 * 2GB memory + 20GB disk
 
 To set up, [Install Ubuntu on Virtualbox](http://www.wikihow.com/Install-Ubuntu-on-VirtualBox) may help you.

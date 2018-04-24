@@ -1,3 +1,8 @@
+# Overview
+The web interface that has served us well for many years is no longer the only way to use Autolab. With the API, developers will be able to help make Autolab more versatile and convenient: Whether it be with a mobile app, a command line tool, a browser extension, or something we've never even thought of.
+
+For students and instructors who only plan to use Autolab, try out the [Autolab CLI](/command-line-interface).
+
 The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.
 
 V1 of the API allows clients to:
@@ -13,6 +18,8 @@ V1 of the API allows clients to:
 All endpoints of the Autolab API requires client authentication in the form of an access token. To obtain this access token, clients must obtain authorization from the user.
 
 Autolab API uses the standard [OAuth2](https://tools.ietf.org/html/rfc6749) [Authorization Code Grant](https://tools.ietf.org/html/rfc6749#section-4.1) for user authorization. For clients with no easy access to web browsers (e.g. console apps), an alternative [device flow](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07)-based authorization method is provided as well.
+
+To understand how to authorize and unauthorize clients as a user, go to [Managing Authorized Apps](/api-managing-authorized-apps)
 
 ### Authorization Code Grant Flow
 

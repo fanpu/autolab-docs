@@ -1,13 +1,15 @@
-site_name: Autolab Docs
+site_name: Autolab Documentation
 pages:
     - Autolab:
         - Getting Started: index.md
         - Guide for Instructors: instructors.md
         - Guide for Lab Authors: lab.md
-        - Features: features.md
-        - API (Beta Feature):
+        - Advanced Features: features.md
+    - Autolab API:
             - Overview: api-overview.md
             - Reference: api-interface.md
+            - Command Line Interface: command-line-interface.md
+            - Managing Authorized Apps: api-managing-authorized-apps.md
     - Tango:
         - Getting Started: tango.md
         - Tango CLI: tango-cli.md 

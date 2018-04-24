@@ -15,7 +15,7 @@
     
     
       
-        <title>VMMS Docs - Autolab Documentation</title>
+        <title>Command Line Interface - Autolab Documentation</title>
       
     
     
@@ -77,11 +77,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Tango
+                  Autolab API
                 </span>
               
             
-            VMMS Docs
+            Command Line Interface
           
         </span>
       </div>
@@ -260,10 +260,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Autolab API
@@ -303,11 +305,82 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../command-line-interface/" title="Command Line Interface" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Command Line Interface
+      </label>
+    
+    <a href="./" title="Command Line Interface" class="md-nav__link md-nav__link--active">
       Command Line Interface
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-authorization" title="Obtaining authorization" class="md-nav__link">
+    Obtaining authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-your-courses-and-assessments" title="Viewing your courses and assessments" class="md-nav__link">
+    Viewing your courses and assessments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-an-assessment" title="Downloading an assessment" class="md-nav__link">
+    Downloading an assessment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-solutions" title="Submitting solutions" class="md-nav__link">
+    Submitting solutions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-scores" title="Viewing scores" class="md-nav__link">
+    Viewing scores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" title="Advanced features" class="md-nav__link">
+    Advanced features
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -332,12 +405,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Tango
@@ -389,119 +460,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        VMMS Docs
-      </label>
-    
-    <a href="./" title="VMMS Docs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tango-vmms/" title="VMMS Docs" class="md-nav__link">
       VMMS Docs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initializevm" title="initializeVM" class="md-nav__link">
-    initializeVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#waitvm" title="waitVM" class="md-nav__link">
-    waitVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyin" title="copyIn" class="md-nav__link">
-    copyIn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runjob" title="runJob" class="md-nav__link">
-    runJob
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyout" title="copyOut" class="md-nav__link">
-    copyOut
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
-    destroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
-    safeDestroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getvms" title="getVMs" class="md-nav__link">
-    getVMs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
-    Docker VMMS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-ec2-vmms-setup" title="Amazon EC2 VMMS Setup" class="md-nav__link">
-    Amazon EC2 VMMS Setup
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -548,89 +511,50 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initializevm" title="initializeVM" class="md-nav__link">
-    initializeVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#waitvm" title="waitVM" class="md-nav__link">
-    waitVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyin" title="copyIn" class="md-nav__link">
-    copyIn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runjob" title="runJob" class="md-nav__link">
-    runJob
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyout" title="copyOut" class="md-nav__link">
-    copyOut
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#destroyvm" title="destroyVM" class="md-nav__link">
-    destroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safedestroyvm" title="safeDestroyVM" class="md-nav__link">
-    safeDestroyVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getvms" title="getVMs" class="md-nav__link">
-    getVMs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-vmms-setup" title="Docker VMMS Setup" class="md-nav__link">
-    Docker VMMS Setup
+  <a href="#obtaining-authorization" title="Obtaining authorization" class="md-nav__link">
+    Obtaining authorization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#amazon-ec2-vmms-setup" title="Amazon EC2 VMMS Setup" class="md-nav__link">
-    Amazon EC2 VMMS Setup
+  <a href="#viewing-your-courses-and-assessments" title="Viewing your courses and assessments" class="md-nav__link">
+    Viewing your courses and assessments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-an-assessment" title="Downloading an assessment" class="md-nav__link">
+    Downloading an assessment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-solutions" title="Submitting solutions" class="md-nav__link">
+    Submitting solutions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-scores" title="Viewing scores" class="md-nav__link">
+    Viewing scores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" title="Advanced features" class="md-nav__link">
+    Advanced features
   </a>
   
 </li>
@@ -650,152 +574,83 @@
               
                 
                 
-                  <h1>VMMS Docs</h1>
-                
-                <p>This page documents the interface for Tango's Virtual Machine Management Systems' (VMMSs) API and instructions for setting up VMMSs. See <a href="https://github.com/autolab/Tango/tree/master/vmms">the vmms directory</a> in Tango for example implementations. </p>
-<h2 id="api">API</h2>
-<p>The functions necessary to implement the API are documented here. Note that for certain implementations, some of these methods will be no-ops since the VMMS doesn't require any particular instructions to perform the specified actions. Furthermore, throughout this document, we use the term "VM" liberally to represent any container-like object on which Tango jobs may be run. </p>
-<h3 id="initializevm">initializeVM</h3>
-<pre class="codehilite"><code class="language-python linenums">initializeVM(self, vm)</code></pre>
+                <h1 id="autolab-command-line-interface">Autolab Command Line Interface</h1>
+<p>To help showcase the capabilities of the API, we developed autolab-cli: A first-party command line client that serves as both a practical tool for users of Autolab, as well as a reference design for developers intending to use the API in their own programs. The cli includes features like downloading and submitting assignments from the terminal, viewing problems, and getting submission feedback.</p>
+<div class="admonition info">
+<p class="admonition-title">Note to CMU Students:</p>
+<p>This cli binary has already been installed on the andrew machines as <code>autolab</code>.</p>
+</div>
+<h2 id="obtaining-authorization">Obtaining authorization</h2>
+<p>Make sure you have the cli installed by running <code>autolab</code> in your terminal. If you see the usage instructions you're good to go. Otherwise, ask your school admin to install the cli from the <a href="https://github.com/autolab/autolab-cli">Autolab CLI Repository</a>.</p>
+<ul>
+<li>To setup autolab-cli with your Autolab account, run <code>autolab setup</code>. This will initiate a manual activation.</li>
+</ul>
+<p><img alt="autolab-cli setup" src="../images/api/api-cli-setup.png" />
+<em>What you'll see when you run <code>autolab setup</code></em></p>
+<p>Once you approve the client on the Autolab website, the client will respond telling you that authorization was successful. You should be able to use the client from now on. If at any point you want to reset the client, run <code>autolab setup -f</code> and you'll be asked to re-authorize the client from a clean state. To deauthorize any client that you've given permission to, look at how to <a href="../api-managing-authorized-apps">Manage Authorized Apps</a>.</p>
+<h2 id="viewing-your-courses-and-assessments">Viewing your courses and assessments</h2>
+<ul>
+<li>To view your current courses, run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab courses</code></pre>
 
 
-<p>Creates a new VM instance for the VMMS based on the fields of <code>vm</code>, which is a <code>TangoMachine</code> object defined in <code>tangoObjects.py</code>.</p>
-<h3 id="waitvm">waitVM</h3>
-<pre class="codehilite"><code class="language-python linenums">waitVM(self, vm, max_secs)</code></pre>
+<p><img alt="autolab-cli courses" src="../images/api/api-cli-courses.png" /></p>
+<p>This will show you a list of ongoing courses in the form <code>unique_name (Display name)</code>. You should use the 'unique_name' of each course when interacting with autolab-cli.</p>
+<ul>
+<li>To view the assessments of a course, run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab asmts &lt;course_unique_name&gt;</code></pre>
 
 
-<p>Waits at most <code>max_secs</code> for a VM to be ready to run jobs. Returns an error if the VM is not ready after <code>max_secs</code>.</p>
-<h3 id="copyin">copyIn</h3>
-<pre class="codehilite"><code class="language-python linenums">copyIn(self, vm, inputFiles)</code></pre>
+<p>This will show you a list of assessments in the same <code>unique_name (Display name)</code> format.</p>
+<h2 id="downloading-an-assessment">Downloading an assessment</h2>
+<ul>
+<li>To start working on an assessment, go to a directory where you usually put your work, and run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab download &lt;course_unique_name&gt;:&lt;asmt_unique_name&gt;</code></pre>
 
 
-<p>Copies the input files for a job into the VM. <code>inputFiles</code> is a list of <code>InputFile</code> objects defined in <code>tangoObjects.py</code>. For each <code>InputFile</code> object, <code>file.localFile</code> is the name of the file on the Tango host machine and <code>file.destFile</code> is what the name of the file should be on the VM. </p>
-<h3 id="runjob">runJob</h3>
-<pre class="codehilite"><code class="language-python linenums">runJob(self, vm, runTimeout, maxOutputFileSize)</code></pre>
+<p><img alt="autolab-cli download" src="../images/api/api-cli-download.png" /></p>
+<p>This will create a directory with the assessment name in your current directory, and download the handout and writeup in it. This new directory is called an 'assessment directory'. Whenever you're inside an assessment directory, autolab-cli will respond according to the context.</p>
+<p>For example, when you're inside an assessment directory, you can run  </p>
+<pre class="codehilite"><code class="linenums">$ autolab problems</code></pre>
 
 
-<p>Runs the autodriver binary on the VM. The autodriver runs <code>make</code> on the VM (which in turn runs the job via the <code>Makefile</code> that was provided as a part of the input files for the job). The output from the autodriver most likely should be redirected to some feedback file to be used in the next method of the API. </p>
-<h3 id="copyout">copyOut</h3>
-<pre class="codehilite"><code class="language-python linenums">copyOut(self, vm, destFile)</code></pre>
+<p>This will show you the problems of this assessment.</p>
+<h2 id="submitting-solutions">Submitting solutions</h2>
+<ul>
+<li>To submit to an assessment inside an assessment directory, run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab submit &lt;filename&gt;</code></pre>
 
 
-<p>Copies the output file for the job out of the VM into <code>destFile</code> on the Tango host machine. </p>
-<h3 id="destroyvm">destroyVM</h3>
-<pre class="codehilite"><code class="language-python linenums">destroyVM(self, vm)</code></pre>
+<p><img alt="autolab-cli submit" src="../images/api/api-cli-submit.png" /></p>
+<p>Yep, it's that easy.</p>
+<h2 id="viewing-scores">Viewing scores</h2>
+<ul>
+<li>To view the scores you got, run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab scores</code></pre>
 
 
-<p>Removes a VM from the Tango system. </p>
-<h3 id="safedestroyvm">safeDestroyVM</h3>
-<pre class="codehilite"><code class="language-python linenums">safeDestroyVM(self, vm)</code></pre>
+<p><img alt="autolab-cli scores" src="../images/api/api-cli-scores.png" /></p>
+<p>The scores command will only return scores for those submissions that are made via this client. This is a privacy constraint of the Autolab API.</p>
+<ul>
+<li>To view the feedback you got, run  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab feedback</code></pre>
 
 
-<p>Removes a VM from the Tango system and makes sure that it has been removed. </p>
-<h3 id="getvms">getVMs</h3>
-<pre class="codehilite"><code class="language-python linenums">getVMs(self)</code></pre>
+<h2 id="advanced-features">Advanced features</h2>
+<ul>
+<li>You can learn more about each sub-command by running  </li>
+</ul>
+<pre class="codehilite"><code class="linenums">$ autolab &lt;sub-command&gt; -h</code></pre>
 
 
-<p>Returns a complete list of VMs associated with this Tango system. </p>
-<h2 id="docker-vmms-setup">Docker VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs inside Docker containers. </p>
-<ol>
-<li>
-<p>Install docker on host machine by following instructions on the <a href="https://docs.docker.com/installation/">docker installation page</a>. Ensure docker is running:</p>
-<pre class="codehilite"><code class="language-bash linenums">$ docker ps
-# CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</code></pre>
-
-
-</li>
-<li>
-<p>Build base Docker image from root Tango directory.</p>
-<pre class="codehilite"><code class="language-sh linenums">cd path/to/Tango
-docker build -t autograding_image vmms/
-docker images autograding_image    # Check if image built</code></pre>
-
-
-</li>
-<li>
-<p>Update <code>VMMS_NAME</code> in <code>config.py</code>.</p>
-<pre class="codehilite"><code class="language-python linenums"># in config.py
-VMMS_NAME = &quot;localDocker&quot;</code></pre>
-
-
-</li>
-</ol>
-<h2 id="amazon-ec2-vmms-setup">Amazon EC2 VMMS Setup</h2>
-<p>This is a guide to set up Tango to run jobs on an Amazon EC2 VM. </p>
-<ol>
-<li>
-<p>Create an <a href="https://aws.amazon.com/">AWS Account</a> or use an existing one.</p>
-</li>
-<li>
-<p>Obtain your <code>access_key_id</code> and <code>secret_access_key</code> by following the instructions <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">here</a>.</p>
-</li>
-<li>
-<p>Add AWS Credentials to a file called <code>~/.boto</code> using the following format:</p>
-<pre class="codehilite"><code class="language-bash linenums">[Credentials]
-aws_access_key_id = MYAMAZONTESTKEY12345
-aws_secret_access_key = myawssecretaccesskey12345</code></pre>
-
-
-<p>Tango uses the <a href="http://boto.cloudhackers.com/en/latest/">Boto</a> Python package to interface with Amazon Web Services</p>
-</li>
-<li>
-<p>In the AWS EC2 console, create an Ubuntu 14.04+ EC2 instance and save the <code>.pem</code> file in a safe location. </p>
-</li>
-<li>
-<p>Copy the directory and contents of <code>autodriver/</code> in the Tango repo into the EC2 VM. For more help connecting to the EC2 instance follow <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html#AccessingInstancesLinuxSCP">this guide</a></p>
-<pre class="codehilite"><code class="language-bash linenums">chmod 400 /path/my-key-pair.pem
-scp -i /path/my-key-pair.pem -r autodriver/ ubuntu@&lt;ec2-host-name&gt;.compute-1.amazonaws.com:~/</code></pre>
-
-
-<p>The autodriver is used as a sandbox environment to run the job inside the VM. It limits Disk I/O, Disk Usage, monitors security, and controls other valuable <code>sudo</code> level resources.</p>
-</li>
-<li>
-<p>In the EC2 VM, compile the autodriver.</p>
-<pre class="codehilite"><code class="language-bash linenums">$ cd autodriver/
-$ make clean; make
-$ cp -p autodriver /usr/bin/autodriver</code></pre>
-
-
-</li>
-<li>
-<p>Create the <code>autograde</code> Linux user and directory. All jobs will be run under this user.</p>
-<pre class="codehilite"><code class="language-bash linenums">$ useradd autograde
-$ mkdir autograde
-$ chown autograde autograde
-$ chown :autograde autograde</code></pre>
-
-
-</li>
-<li>
-<p>In the AWS EC2 console, create an AMI image from your EC2 VM. Use <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#how-to-create-ebs-ami">this guide</a> to create a custom AMI.</p>
-</li>
-<li>
-<p>Exit the EC2 instance and edit the following values in <code>config.py</code> in the Tango directory.</p>
-<pre class="codehilite"><code class="language-bash linenums"># VMMS to use. Must be set to a VMMS implemented in vmms/ before
-# starting Tango.  Options are: &quot;localDocker&quot;, &quot;distDocker&quot;,
-# &quot;tashiSSH&quot;, and &quot;ec2SSH&quot;
-VMMS_NAME = &quot;ec2SSH&quot;
-######
-# Part 5: EC2 Constants
-#
-EC2_REGION = 'us-east-1'             # EC2 Region
-EC2_USER_NAME = 'ubuntu'             # EC2 username
-DEFAULT_AMI = 'ami-4c99c35b'         # Custom AMI Id 
-DEFAULT_INST_TYPE = 't2.micro'       # Instance Type
-DEFAULT_SECURITY_GROUP = 'autolab-autograde-ec2'  # Security Group with full access to EC2
-SECURITY_KEY_PATH = '/path/to/my-key-pair.pem'    # Absolute path to my-key-pair.pem
-DYNAMIC_SECURITY_KEY_PATH = ''       # Leave blank
-SECURITY_KEY_NAME = 'my-key-pair'    # Name of the key file. Ex: if file name is 'my-key-pair.pem', fill value with 'my-key-pair'
-TANGO_RESERVATION_ID = '1'           # Leave as 1
-INSTANCE_RUNNING = 16                # Status code of a running instance, leave as 16</code></pre>
-
-
-</li>
-<li>
-<p>You should now be ready to run Tango jobs on EC2! Use the <a href="../tango-cli">Tango CLI</a> to test your setup.</p>
-</li>
-</ol>
+<p>This will reveal other flags you may be able to use with each command. For example, you can call all of the context-dependent commands outside of an assessment directory by providing the <code>&lt;course_unique_name&gt;:&lt;asmt_unique_name&gt;</code> pair.</p>
+<p>We hope this speeds up your workflow! If you find any problems, please file an issue on the <a href="https://github.com/autolab/autolab-cli">Autolab CLI Repository</a>.</p>
                 
                   
                 
@@ -814,7 +669,7 @@ INSTANCE_RUNNING = 16                # Status code of a running instance, leave 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tango-rest/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../api-interface/" title="Reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -823,19 +678,19 @@ INSTANCE_RUNNING = 16                # Status code of a running instance, leave 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                REST API
+                Reference
               </span>
             </div>
           </a>
         
         
-          <a href="../tango-deploy/" title="Deploying Tango" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../api-managing-authorized-apps/" title="Managing Authorized Apps" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deploying Tango
+                Managing Authorized Apps
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

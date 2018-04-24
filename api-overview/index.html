@@ -15,7 +15,7 @@
     
     
       
-        <title>Overview - Autolab Docs</title>
+        <title>Overview - Autolab Documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href=".." title="Autolab Docs" class="md-logo md-header-nav__button">
+          <a href=".." title="Autolab Documentation" class="md-logo md-header-nav__button">
             <img src="../images/logo.svg" width="24" height="24">
           </a>
         
@@ -77,11 +77,7 @@
             
               
                 <span class="md-header-nav__parent">
-                  Autolab
-                </span>
-              
-                <span class="md-header-nav__parent">
-                  API (Beta Feature)
+                  Autolab API
                 </span>
               
             
@@ -161,7 +157,7 @@
         <img src="../images/logo.svg">
       </i>
     
-    Autolab Docs
+    Autolab Documentation
   </label>
   
     <div class="md-nav__source">
@@ -192,12 +188,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Autolab
@@ -251,29 +245,34 @@
 
 
   <li class="md-nav__item">
-    <a href="../features/" title="Features" class="md-nav__link">
-      Features
+    <a href="../features/" title="Advanced Features" class="md-nav__link">
+      Advanced Features
     </a>
   </li>
 
         
-          
-          
-          
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
 
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-1-5">
-      API (Beta Feature)
+    <label class="md-nav__link" for="nav-2">
+      Autolab API
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-5">
-        API (Beta Feature)
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Autolab API
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -289,6 +288,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
         Overview
@@ -301,6 +302,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="toc">Table of contents</label>
@@ -394,8 +397,27 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command-line-interface/" title="Command Line Interface" class="md-nav__link">
+      Command Line Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-managing-authorized-apps/" title="Managing Authorized Apps" class="md-nav__link">
+      Managing Authorized Apps
+    </a>
   </li>
 
         
@@ -411,13 +433,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       Tango
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         Tango
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -514,6 +536,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -600,9 +624,10 @@
               
                 
                 
-                  <h1>Overview</h1>
-                
-                <p>The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.</p>
+                <h1 id="overview">Overview</h1>
+<p>The web interface that has served us well for many years is no longer the only way to use Autolab. With the API, developers will be able to help make Autolab more versatile and convenient: Whether it be with a mobile app, a command line tool, a browser extension, or something we've never even thought of.</p>
+<p>For students and instructors who only plan to use Autolab, try out the <a href="../command-line-interface">Autolab CLI</a>.</p>
+<p>The Autolab REST API allows developers to create clients that can access features of Autolab on behalf of Autolab users.</p>
 <p>V1 of the API allows clients to:</p>
 <ul>
 <li>Access basic user info</li>
@@ -614,6 +639,7 @@
 <h2 id="authorization">Authorization</h2>
 <p>All endpoints of the Autolab API requires client authentication in the form of an access token. To obtain this access token, clients must obtain authorization from the user.</p>
 <p>Autolab API uses the standard <a href="https://tools.ietf.org/html/rfc6749">OAuth2</a> <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization Code Grant</a> for user authorization. For clients with no easy access to web browsers (e.g. console apps), an alternative <a href="https://tools.ietf.org/html/draft-ietf-oauth-device-flow-07">device flow</a>-based authorization method is provided as well.</p>
+<p>To understand how to authorize and unauthorize clients as a user, go to <a href="../api-managing-authorized-apps">Managing Authorized Apps</a></p>
 <h3 id="authorization-code-grant-flow">Authorization Code Grant Flow</h3>
 <p>The authorization code grant consists of 5 basic steps:</p>
 <ol>
@@ -706,7 +732,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../features/" title="Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../features/" title="Advanced Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -715,7 +741,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Features
+                Advanced Features
               </span>
             </div>
           </a>

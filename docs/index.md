@@ -8,7 +8,18 @@ For information on how to use Autolab for your course see the [Guide for Instruc
 
 Autolab consists of two services: (1) the Ruby on Rails frontend, and (2) [Tango](/tango), the RESTful Python autograding server. Either service can run independently without the other. But in order to use all features of Autolab, we highly recommend installing both services.
 
-Currently, we have support for installing Autolab on [Ubuntu 14.04+](#ubuntu-1404) and [Mac OSX](#mac-osx-1011).
+Currently, we have support for installing Autolab on [AWS](#aws), [Ubuntu 14.04+](#ubuntu-1404), and [Mac OSX](#mac-osx-1011).
+
+### AWS
+If you want to try Autolab or Tango without any installation, we have a pre-built AMI you can deploy on AWS' free tier. To deploy it, follow the official [EC2 Launch Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/). Make sure that you
+
+1. Select 'Autolab vx.x.x' as the ami. You can find this in the community amis tab.
+
+2. Make sure you're using atleast a 30GB volume on the Add Storage tab.
+
+3. On the Configure Security Group tab, add rules to allow ports 80 and 8600.
+
+Once your EC2 Instance is up, you can ssh into it using `ssh -i <aws_key>.pem ubuntu@<Public DNS>` and follow the instructions in readme.txt
 
 ### Ubuntu 14.04+
 

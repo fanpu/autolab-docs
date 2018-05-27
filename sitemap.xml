@@ -5,25 +5,25 @@
         
     <url>
      <loc>/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/instructors/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/lab/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/features/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -33,25 +33,25 @@
         
     <url>
      <loc>/api-overview/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/api-interface/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/command-line-interface/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/api-managing-authorized-apps/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -61,31 +61,31 @@
         
     <url>
      <loc>/tango/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-cli/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-rest/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-vmms/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/tango-deploy/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -94,7 +94,7 @@
     
     <url>
      <loc>/one-click/</loc>
-     <lastmod>2018-04-24</lastmod>
+     <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

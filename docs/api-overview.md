@@ -49,7 +49,7 @@ Note that this is different from the "device flow" described in the Internet Dra
 
 #### Obtaining User Code
 
-Request Endpoint: `GET /device_flow_init`
+Request Endpoint: `GET /oauth/device_flow_init`
 
 Parameters:
 
@@ -67,7 +67,7 @@ The latter two should be displayed to the user.
 
 After asking the user to enter the user code on the verification site, the client should poll the device_flow_authorize endpoint to find out if the user has completed the authorization step.
 
-Request Endpoint: `GET /device_flow_authorize`
+Request Endpoint: `GET /oauth/device_flow_authorize`
 
 Parameters:
 

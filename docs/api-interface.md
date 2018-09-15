@@ -2,7 +2,11 @@ This page details all the endpoints of the Autolab REST API.
 
 The client's access token should be included as a parameter to all endpoints. For details on obtaining access tokens, please see the [API Overview](/api-overview)
 
-## Format
+## Routing
+
+For version 1 of the API, all endpoints are under the path `/api/v1/`. For example, to get user info, send a request to `https://<host>/api/v1/user`.
+
+## Request & Response Format
 
 All endpoints expect the HTTP GET method unless otherwise specified.
 

@@ -229,7 +229,7 @@ When a submission fails, the HTTP response code will not be 200. The response bo
 ---
 ### submissions
 
-Get all submissions the user has made via this client. To protect the user's private scores and feedback, only the submissions made via your client is returned. i.e. submissions made through other clients or on the Autolab website are never returned.
+Get all submissions the user has made.
 
 **Scope:** 'user_scores'
 

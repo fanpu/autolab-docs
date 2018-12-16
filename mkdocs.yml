@@ -1,5 +1,5 @@
 site_name: Autolab Documentation
-pages:
+nav:
     - Autolab:
         - Getting Started: index.md
         - Guide for Instructors: instructors.md

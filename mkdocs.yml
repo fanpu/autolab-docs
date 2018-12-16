@@ -12,13 +12,14 @@ pages:
             - Managing Authorized Apps: api-managing-authorized-apps.md
     - Tango:
         - Getting Started: tango.md
-        - Tango CLI: tango-cli.md 
+        - Tango CLI: tango-cli.md
         - REST API: tango-rest.md
         - VMMS Docs: tango-vmms.md
         - Deploying Tango: tango-deploy.md
     - OneClick Install: one-click.md
-theme: null
-theme_dir: 'mkdocs-material/material'
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
 repo_name: 'Autolab'
 repo_url: 'https://github.com/Autolab/autolab'
 extra:

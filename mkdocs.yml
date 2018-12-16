@@ -18,8 +18,8 @@ nav:
         - Deploying Tango: tango-deploy.md
     - OneClick Install: one-click.md
 theme:
-  name: null
-  custom_dir: 'mkdocs-material/material'
+  name: 'material'
+
 repo_name: 'Autolab'
 repo_url: 'https://github.com/Autolab/autolab'
 extra:
@@ -37,5 +37,6 @@ google_analytics:
   - 'auto'
 markdown_extensions:
   - admonition
-  - codehilite(linenums=true)
+  - codehilite:
+      linenums: True
 strict: true

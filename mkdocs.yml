@@ -18,8 +18,7 @@ nav:
         - Deploying Tango: tango-deploy.md
     - OneClick Install: one-click.md
 theme:
-  name: null
-  custom_dir: 'mkdocs-material/material'
+  name: material
 
 repo_name: 'Autolab'
 repo_url: 'https://github.com/Autolab/autolab'
